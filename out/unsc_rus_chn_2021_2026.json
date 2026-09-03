@@ -1,0 +1,186 @@
+{
+  "source": "data/raw/2026_02_06_sc_voting.csv.gz",
+  "scope_warning": "Export contains adopted resolutions only; vetoed drafts are absent. Veto analysis is impossible from this file.",
+  "window": [
+    "2021-01-01",
+    "2100-01-01"
+  ],
+  "window_actual": [
+    "2021-01-29",
+    "2026-01-30"
+  ],
+  "adopted_ballots": 2737,
+  "in_scope_prc_post_soviet": 252,
+  "contested_ballots": 77,
+  "contested_share": 0.3056,
+  "all_adopted": {
+    "a": "RUS",
+    "b": "CHN",
+    "comparable": 252,
+    "identical": 224,
+    "partial_split": 28,
+    "opposed": 0,
+    "absence": 0,
+    "agreement": 0.8889,
+    "opposed_rate": 0.0
+  },
+  "contested_only": {
+    "a": "RUS",
+    "b": "CHN",
+    "comparable": 77,
+    "identical": 49,
+    "partial_split": 28,
+    "opposed": 0,
+    "absence": 0,
+    "agreement": 0.6364,
+    "opposed_rate": 0.0
+  },
+  "baselines_contested": [
+    {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 77,
+      "identical": 49,
+      "partial_split": 28,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.6364,
+      "opposed_rate": 0.0
+    },
+    {
+      "a": "USA",
+      "b": "GBR",
+      "comparable": 77,
+      "identical": 71,
+      "partial_split": 6,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.9221,
+      "opposed_rate": 0.0
+    },
+    {
+      "a": "USA",
+      "b": "FRA",
+      "comparable": 77,
+      "identical": 69,
+      "partial_split": 8,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.8961,
+      "opposed_rate": 0.0
+    },
+    {
+      "a": "GBR",
+      "b": "FRA",
+      "comparable": 77,
+      "identical": 75,
+      "partial_split": 2,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.974,
+      "opposed_rate": 0.0
+    },
+    {
+      "a": "USA",
+      "b": "RUS",
+      "comparable": 77,
+      "identical": 13,
+      "partial_split": 63,
+      "opposed": 1,
+      "absence": 0,
+      "agreement": 0.1688,
+      "opposed_rate": 0.013
+    },
+    {
+      "a": "USA",
+      "b": "CHN",
+      "comparable": 77,
+      "identical": 28,
+      "partial_split": 49,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.3636,
+      "opposed_rate": 0.0
+    }
+  ],
+  "split_direction": {
+    "a_yes_b_abstain": 3,
+    "b_yes_a_abstain": 24,
+    "other": 1
+  },
+  "abstention_rate_contested": {
+    "RUS": 0.8052,
+    "CHN": 0.5455,
+    "USA": 0.0909,
+    "GBR": 0.039,
+    "FRA": 0.039
+  },
+  "by_period_contested": {
+    "2021": {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 9,
+      "identical": 5,
+      "partial_split": 4,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.5556,
+      "opposed_rate": 0.0
+    },
+    "2022": {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 18,
+      "identical": 12,
+      "partial_split": 6,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.6667,
+      "opposed_rate": 0.0
+    },
+    "2023": {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 15,
+      "identical": 8,
+      "partial_split": 7,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.5333,
+      "opposed_rate": 0.0
+    },
+    "2024": {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 16,
+      "identical": 8,
+      "partial_split": 8,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.5,
+      "opposed_rate": 0.0
+    },
+    "2025": {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 17,
+      "identical": 14,
+      "partial_split": 3,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.8235,
+      "opposed_rate": 0.0
+    },
+    "2026": {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 2,
+      "identical": 2,
+      "partial_split": 0,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 1.0,
+      "opposed_rate": 0.0
+    }
+  }
+}

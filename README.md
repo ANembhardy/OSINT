@@ -30,6 +30,8 @@ No dependencies beyond Python 3.11 and `pytest` for the tests.
 make test        # offline suite (34 tests)
 make ga          # Russia-China General Assembly voting analysis
 make unsc        # Russia-China Security Council voting analysis
+make ga-window   # the same, restricted to 2021-2026
+make unsc-window #
 make audit       # what in the seed data still lacks a primary record
 make contacts    # leader-level contact indicators
 make sql         # BigQuery SQL for the GDELT contact series
@@ -75,9 +77,12 @@ Every claim produced here is tagged with its tier.
 - Fetches cache to `out/cache/` with a `.meta.json` sidecar recording URL and
   retrieval time.
 
+Any window: `python -m rcwatch ga --since 2021-01-01 --until 2026-01-01`.
+
 ## What the data says
 
-Three results from the committed datasets, each reproducible and test-guarded:
+Results from the committed datasets, each reproducible and test-guarded.
+Full series (1992-2025/26):
 
 1. **The base rate inverts the headline.** On contested General Assembly votes
    1992-2025, Russia-China agreement is 58.4% -- *below* the Global South mean
@@ -91,6 +96,15 @@ Three results from the committed datasets, each reproducible and test-guarded:
    voting no on exactly two of nine Ukraine texts -- the Human Rights Council
    suspension and the reparations mechanism -- both precedent-setting rather than
    condemnatory.
+
+Restricted to **2021-2026** (see `docs/03-findings-2026-09.md` section 1.6), the
+dyad is *tighter*, not looser: contested GA agreement rises to 68.1% and Council
+agreement to 63.6%. The base-rate inversion survives -- the Global South mean is
+still higher at 79.3%. Two things drive the apparent convergence: China-India
+fell 11 points while Russia-China rose 10, and US-Russia Council agreement
+collapsed to 16.9%. Within the window Russia takes the more negative position in
+95 of 101 contested GA splits, and abstains on 81% of contested Council
+resolutions against China's 55%.
 
 ## Status
 

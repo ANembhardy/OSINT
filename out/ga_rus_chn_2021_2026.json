@@ -1,0 +1,201 @@
+{
+  "source": "data/raw/2026_02_06_ga_voting.csv.gz",
+  "citation": "United Nations Dag Hammarskjold Library, General Assembly Voting Data, United Nations, version 5 (February 2026), 2026, downloaded from https://digitallibrary.un.org/record/4060887",
+  "resolutions_total": 5694,
+  "window": [
+    "2021-01-01",
+    "2100-01-01"
+  ],
+  "window_actual": [
+    "2021-02-23",
+    "2025-12-18"
+  ],
+  "in_scope": 550,
+  "contested_ballots": 316,
+  "contested_share": 0.5745,
+  "session_kinds": {
+    "regular": 534,
+    "special": 0,
+    "emergency_special": 16
+  },
+  "all_recorded": {
+    "a": "RUS",
+    "b": "CHN",
+    "comparable": 547,
+    "identical": 399,
+    "partial_split": 103,
+    "opposed": 45,
+    "absence": 3,
+    "agreement": 0.7294,
+    "opposed_rate": 0.0823
+  },
+  "contested_only": {
+    "a": "RUS",
+    "b": "CHN",
+    "comparable": 313,
+    "identical": 213,
+    "partial_split": 67,
+    "opposed": 33,
+    "absence": 3,
+    "agreement": 0.6805,
+    "opposed_rate": 0.1054
+  },
+  "baselines_contested": [
+    {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 313,
+      "identical": 213,
+      "partial_split": 67,
+      "opposed": 33,
+      "absence": 3,
+      "agreement": 0.6805,
+      "opposed_rate": 0.1054
+    },
+    {
+      "a": "RUS",
+      "b": "IND",
+      "comparable": 316,
+      "identical": 168,
+      "partial_split": 113,
+      "opposed": 35,
+      "absence": 0,
+      "agreement": 0.5316,
+      "opposed_rate": 0.1108
+    },
+    {
+      "a": "CHN",
+      "b": "IND",
+      "comparable": 313,
+      "identical": 209,
+      "partial_split": 90,
+      "opposed": 14,
+      "absence": 3,
+      "agreement": 0.6677,
+      "opposed_rate": 0.0447
+    },
+    {
+      "a": "CHN",
+      "b": "BRA",
+      "comparable": 311,
+      "identical": 186,
+      "partial_split": 92,
+      "opposed": 33,
+      "absence": 5,
+      "agreement": 0.5981,
+      "opposed_rate": 0.1061
+    },
+    {
+      "a": "RUS",
+      "b": "IRN",
+      "comparable": 300,
+      "identical": 196,
+      "partial_split": 56,
+      "opposed": 48,
+      "absence": 16,
+      "agreement": 0.6533,
+      "opposed_rate": 0.16
+    },
+    {
+      "a": "CHN",
+      "b": "PAK",
+      "comparable": 310,
+      "identical": 242,
+      "partial_split": 57,
+      "opposed": 11,
+      "absence": 6,
+      "agreement": 0.7806,
+      "opposed_rate": 0.0355
+    },
+    {
+      "a": "CHN",
+      "b": "ZAF",
+      "comparable": 311,
+      "identical": 212,
+      "partial_split": 74,
+      "opposed": 25,
+      "absence": 5,
+      "agreement": 0.6817,
+      "opposed_rate": 0.0804
+    },
+    {
+      "a": "USA",
+      "b": "GBR",
+      "comparable": 313,
+      "identical": 230,
+      "partial_split": 41,
+      "opposed": 42,
+      "absence": 3,
+      "agreement": 0.7348,
+      "opposed_rate": 0.1342
+    },
+    {
+      "a": "FRA",
+      "b": "DEU",
+      "comparable": 316,
+      "identical": 280,
+      "partial_split": 35,
+      "opposed": 1,
+      "absence": 0,
+      "agreement": 0.8861,
+      "opposed_rate": 0.0032
+    }
+  ],
+  "g77_mean_pairwise_contested": 0.793,
+  "by_session_regular": {
+    "76": {
+      "raw": 0.7875,
+      "raw_n": 80,
+      "contested": 0.72,
+      "contested_n": 50
+    },
+    "77": {
+      "raw": 0.7011,
+      "raw_n": 87,
+      "contested": 0.6949,
+      "contested_n": 59
+    },
+    "78": {
+      "raw": 0.6667,
+      "raw_n": 84,
+      "contested": 0.6491,
+      "contested_n": 57
+    },
+    "79": {
+      "raw": 0.7232,
+      "raw_n": 112,
+      "contested": 0.6825,
+      "contested_n": 63
+    },
+    "80": {
+      "raw": 0.7736,
+      "raw_n": 159,
+      "contested": 0.6825,
+      "contested_n": 63
+    }
+  },
+  "emergency_special": {
+    "ES-10": {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 7,
+      "identical": 7,
+      "partial_split": 0,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 1.0,
+      "opposed_rate": 0.0
+    },
+    "ES-11": {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 9,
+      "identical": 2,
+      "partial_split": 7,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.2222,
+      "opposed_rate": 0.0
+    }
+  }
+}

@@ -93,15 +93,21 @@ def cmd_unsc(args) -> int:
         return 0
 
     ballots = unsc.load(args.data)
+    floor = max(args.since, unsc.USSR_SUCCESSION)
     scoped = [
         b for b in ballots
-        if b.china_seat == "PRC" and b.date >= unsc.USSR_SUCCESSION
+        if b.china_seat == "PRC" and floor <= b.date < args.until
     ]
+    if not scoped:
+        print(f"no ballots in {args.since}..{args.until}", file=sys.stderr)
+        return 1
     con = unsc.contested(scoped)
 
     out = {
         "source": args.data,
         "scope_warning": unsc.audit(args.data)["scope_warning"],
+        "window": [args.since, args.until],
+        "window_actual": [min(b.date for b in scoped), max(b.date for b in scoped)],
         "adopted_ballots": len(ballots),
         "in_scope_prc_post_soviet": len(scoped),
         "contested_ballots": len(con),
@@ -137,9 +143,15 @@ def cmd_unsc(args) -> int:
         for c in (args.a, args.b, "USA", "GBR", "FRA")
     } if con else {}
 
-    periods = {}
+    # Yearly when the observed window is short, five-yearly when it is long.
+    # Derived from the data actually in scope, not from the --until default.
+    years = [b.year for b in scoped]
+    span = max(years) - min(years)
+    key = (lambda b: str(b.year)) if span <= 10 else \
+          (lambda b: f"{(b.year // 5) * 5}-{(b.year // 5) * 5 + 4}")
+    periods: dict[str, list] = {}
     for b in con:
-        periods.setdefault(f"{(b.year // 5) * 5}-{(b.year // 5) * 5 + 4}", []).append(b)
+        periods.setdefault(key(b), []).append(b)
     out["by_period_contested"] = {
         k: agreement.score(unsc.to_vote_table(v), args.a, args.b,
                            keep_divergences=False).summary()
@@ -163,7 +175,11 @@ def cmd_ga(args) -> int:
     from . import ga
 
     res = ga.load(args.data)
-    scoped = [r for r in res if r.china_seat == "PRC" and r.date >= args.since]
+    scoped = [r for r in res
+              if r.china_seat == "PRC" and args.since <= r.date < args.until]
+    if not scoped:
+        print(f"no resolutions in {args.since}..{args.until}", file=sys.stderr)
+        return 1
     regular = ga.regular_sessions(scoped)
 
     tbl = ga.to_vote_table(scoped)
@@ -173,6 +189,8 @@ def cmd_ga(args) -> int:
         "source": args.data,
         "citation": ga.CITATION,
         "resolutions_total": len(res),
+        "window": [args.since, args.until],
+        "window_actual": [min(r.date for r in scoped), max(r.date for r in scoped)],
         "in_scope": len(scoped),
         "contested_ballots": len(con),
         "contested_share": round(len(con) / len(tbl), 4) if tbl else None,
@@ -277,6 +295,8 @@ def main(argv: list[str] | None = None) -> int:
     n.add_argument("--data", default=SC_DEFAULT)
     n.add_argument("--a", default="RUS")
     n.add_argument("--b", default="CHN")
+    n.add_argument("--since", default="1992-01-01", help="ISO date, inclusive")
+    n.add_argument("--until", default="2100-01-01", help="ISO date, exclusive")
     n.add_argument("--audit", action="store_true", help="print the data-quality report only")
     n.set_defaults(func=cmd_unsc)
 
@@ -285,6 +305,7 @@ def main(argv: list[str] | None = None) -> int:
     g2.add_argument("--a", default="RUS")
     g2.add_argument("--b", default="CHN")
     g2.add_argument("--since", default="1992-01-01", help="ISO date; default skips the Soviet series")
+    g2.add_argument("--until", default="2100-01-01", help="ISO date, exclusive")
     g2.add_argument("--threshold", type=float, default=0.10)
     g2.add_argument("--min-n", type=int, default=10, help="drop sessions with fewer comparable votes")
     g2.set_defaults(func=cmd_ga)

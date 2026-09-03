@@ -1,6 +1,14 @@
 {
   "source": "data/raw/2026_02_06_sc_voting.csv.gz",
   "scope_warning": "Export contains adopted resolutions only; vetoed drafts are absent. Veto analysis is impossible from this file.",
+  "window": [
+    "1992-01-01",
+    "2100-01-01"
+  ],
+  "window_actual": [
+    "1992-01-06",
+    "2026-01-30"
+  ],
   "adopted_ballots": 2737,
   "in_scope_prc_post_soviet": 2039,
   "contested_ballots": 242,

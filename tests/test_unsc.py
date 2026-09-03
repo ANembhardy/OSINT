@@ -208,3 +208,125 @@ def test_contested_filter_moves_the_published_trend(resolutions):
     assert raw_drop > 0.10                                        # ~11 points raw
     assert con_drop < 0.03                                        # ~2 points contested
     assert raw_drop > con_drop * 3
+
+
+# --------------------------------------------------------------------------- #
+# 2021-2026 window (docs/03-findings-2026-09.md section 1.6)
+# --------------------------------------------------------------------------- #
+
+WINDOW = "2021-01-01"
+
+
+@ga_only
+def test_window_ga_headline(resolutions):
+    scoped = [r for r in resolutions if r.china_seat == "PRC" and r.date >= WINDOW]
+    tbl = ga.to_vote_table(scoped)
+    con = ag.contested(tbl)
+
+    assert len(scoped) == 550
+    assert ag.score(tbl, "RUS", "CHN").agreement == pytest.approx(0.729, abs=0.002)
+    assert ag.score(con, "RUS", "CHN").agreement == pytest.approx(0.681, abs=0.002)
+
+
+@ga_only
+def test_window_is_more_aligned_than_the_long_run(resolutions):
+    """The recent window points the opposite way to the 'friends moving apart' reading."""
+    prc = [r for r in resolutions if r.china_seat == "PRC" and r.date >= "1992-01-01"]
+    win = [r for r in prc if r.date >= WINDOW]
+
+    long_run = ag.score(ag.contested(ga.to_vote_table(prc)), "RUS", "CHN").agreement
+    recent = ag.score(ag.contested(ga.to_vote_table(win)), "RUS", "CHN").agreement
+    assert recent > long_run + 0.08
+
+
+@ga_only
+def test_window_base_rate_still_inverts(resolutions):
+    """Alignment rose, but stays below the ambient Global South level."""
+    win = [r for r in resolutions if r.china_seat == "PRC" and r.date >= WINDOW]
+    con = ag.contested(ga.to_vote_table(win))
+
+    dyad = ag.score(con, "RUS", "CHN").agreement
+    g77 = ag.mean_pairwise(con, ("DZA", "EGY", "IND", "IDN", "IRN", "PAK", "NGA",
+                                 "ZAF", "BRA", "CUB", "VEN", "MYS", "THA", "LKA", "ZWE"))
+    assert g77 == pytest.approx(0.793, abs=0.002)
+    assert dyad < g77
+    # China-India fell to roughly the Russia-China level in this window
+    assert ag.score(con, "CHN", "IND").agreement == pytest.approx(0.668, abs=0.002)
+
+
+@ga_only
+def test_window_russia_is_the_rejectionist(resolutions):
+    """Of the contested GA splits, Russia takes the more negative side ~95% of the time."""
+    win = [r for r in resolutions if r.china_seat == "PRC" and r.date >= WINDOW]
+    con = ag.contested(ga.to_vote_table(win))
+
+    harsher = {"RUS": 0, "CHN": 0}
+    for votes in con.values():
+        r, c = votes.get("RUS"), votes.get("CHN")
+        if r is None or c is None or r == c or ag.ABSENT in (r, c):
+            continue
+        # higher code = more negative (1 yes, 2 abstain, 3 no)
+        harsher["RUS" if r > c else "CHN"] += 1
+
+    assert harsher["RUS"] == 95
+    assert harsher["CHN"] == 5
+
+
+@ga_only
+def test_window_opposed_votes_are_arms_control_and_rights(resolutions):
+    """31 of 33 opposed votes are Russia no / China yes."""
+    win = [r for r in resolutions if r.china_seat == "PRC" and r.date >= WINDOW]
+    con = ag.contested(ga.to_vote_table(win))
+    opposed = [v for v in con.values() if {v.get("RUS"), v.get("CHN")} == {ag.YES, ag.NO}]
+
+    assert len(opposed) == 33
+    assert sum(1 for v in opposed if v["RUS"] == ag.NO) == 31
+
+
+@ga_only
+def test_window_issue_contingency_is_absolute(resolutions):
+    """Palestine 100%, Ukraine 22% -- same governments, same five years."""
+    win = [r for r in resolutions if r.china_seat == "PRC" and r.date >= WINDOW]
+
+    def es(num):
+        sub = [r for r in win if r.session_kind == "emergency_special"
+               and r.session_number == num]
+        return ag.score(ga.to_vote_table(sub), "RUS", "CHN")
+
+    assert es(10).agreement == 1.0
+    assert es(11).agreement == pytest.approx(0.222, abs=0.002)
+
+
+def test_window_unsc_headline(ballots):
+    win = [b for b in ballots if b.date >= WINDOW]
+    con = unsc.contested(win)
+
+    assert len(win) == 252
+    assert ag.score(unsc.to_vote_table(win), "RUS", "CHN").agreement == pytest.approx(0.889, abs=0.002)
+    assert ag.score(unsc.to_vote_table(con), "RUS", "CHN").agreement == pytest.approx(0.636, abs=0.002)
+
+
+def test_window_unsc_russia_abstains_far_more_than_china(ballots):
+    con = unsc.contested([b for b in ballots if b.date >= WINDOW])
+    rate = {m: sum(1 for b in con if b.votes.get(m) == ag.ABSTAIN) / len(con)
+            for m in ("RUS", "CHN", "USA", "GBR", "FRA")}
+
+    assert rate["RUS"] == pytest.approx(0.81, abs=0.01)
+    assert rate["CHN"] == pytest.approx(0.55, abs=0.01)
+    assert rate["RUS"] > rate["CHN"] > rate["USA"]
+
+
+def test_window_unsc_us_russia_alignment_collapses(ballots):
+    """The dyad looks tighter partly because the alternatives decayed faster."""
+    full = unsc.to_vote_table(unsc.contested(
+        [b for b in ballots if b.china_seat == "PRC" and b.date >= unsc.USSR_SUCCESSION]))
+    win = unsc.to_vote_table(unsc.contested([b for b in ballots if b.date >= WINDOW]))
+
+    assert ag.score(win, "USA", "RUS").agreement == pytest.approx(0.169, abs=0.002)
+    assert ag.score(win, "USA", "RUS").agreement < ag.score(full, "USA", "RUS").agreement
+    assert ag.score(win, "GBR", "FRA").agreement > 0.95      # P3 stays cohesive
+
+
+def test_window_unsc_never_opposed(ballots):
+    con = unsc.contested([b for b in ballots if b.date >= WINDOW])
+    assert ag.score(unsc.to_vote_table(con), "RUS", "CHN").opposed == 0
