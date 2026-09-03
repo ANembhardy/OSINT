@@ -22,6 +22,7 @@
     "opposed": 0,
     "absence": 0,
     "agreement": 0.8889,
+    "s_score": 0.9444,
     "opposed_rate": 0.0
   },
   "contested_only": {
@@ -33,6 +34,7 @@
     "opposed": 0,
     "absence": 0,
     "agreement": 0.6364,
+    "s_score": 0.8182,
     "opposed_rate": 0.0
   },
   "baselines_contested": [
@@ -45,6 +47,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.6364,
+      "s_score": 0.8182,
       "opposed_rate": 0.0
     },
     {
@@ -56,6 +59,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.9221,
+      "s_score": 0.961,
       "opposed_rate": 0.0
     },
     {
@@ -67,6 +71,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.8961,
+      "s_score": 0.9481,
       "opposed_rate": 0.0
     },
     {
@@ -78,6 +83,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.974,
+      "s_score": 0.987,
       "opposed_rate": 0.0
     },
     {
@@ -89,6 +95,7 @@
       "opposed": 1,
       "absence": 0,
       "agreement": 0.1688,
+      "s_score": 0.5779,
       "opposed_rate": 0.013
     },
     {
@@ -100,6 +107,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.3636,
+      "s_score": 0.6818,
       "opposed_rate": 0.0
     }
   ],
@@ -107,6 +115,24 @@
     "a_yes_b_abstain": 3,
     "b_yes_a_abstain": 24,
     "other": 1
+  },
+  "withheld_from_majority_contested": {
+    "RUS": {
+      "country": "RUS",
+      "ballots": 77,
+      "with_majority": 14,
+      "withheld": 62,
+      "against": 1,
+      "withheld_or_against_rate": 0.8182
+    },
+    "CHN": {
+      "country": "CHN",
+      "ballots": 77,
+      "with_majority": 35,
+      "withheld": 42,
+      "against": 0,
+      "withheld_or_against_rate": 0.5455
+    }
   },
   "abstention_rate_contested": {
     "RUS": 0.8052,
@@ -125,6 +151,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.5556,
+      "s_score": 0.7778,
       "opposed_rate": 0.0
     },
     "2022": {
@@ -136,6 +163,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.6667,
+      "s_score": 0.8333,
       "opposed_rate": 0.0
     },
     "2023": {
@@ -147,6 +175,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.5333,
+      "s_score": 0.7667,
       "opposed_rate": 0.0
     },
     "2024": {
@@ -158,6 +187,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.5,
+      "s_score": 0.75,
       "opposed_rate": 0.0
     },
     "2025": {
@@ -169,6 +199,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.8235,
+      "s_score": 0.9118,
       "opposed_rate": 0.0
     },
     "2026": {
@@ -180,6 +211,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 1.0,
+      "s_score": 1.0,
       "opposed_rate": 0.0
     }
   }

@@ -94,7 +94,29 @@ class AgreementResult:
 
     @property
     def agreement(self) -> float:
+        """Exact-match rate. Treats a partial split as total disagreement."""
         return self.identical / self.comparable if self.comparable else float("nan")
+
+    @property
+    def s_score(self) -> float:
+        """Lijphart agreement index: identical 1.0, partial split 0.5, opposed 0.0.
+
+        **Prefer this to `agreement` for anything substantive.** An abstention
+        opposite a yes or a no is *partial alignment*, not disagreement: the
+        abstaining state is declining to endorse the text while also declining to
+        oppose it. In the Security Council the asymmetry is sharper still --
+        where one permanent member vetoes and the other abstains, the abstainer
+        withholds the second veto but also withholds support, which is
+        cover rather than defection.
+
+        The two measures can differ enormously. On the nine Ukraine emergency
+        special session texts, Russia-China exact agreement is 22.2% and the
+        S-score is 61.1%, because seven of the nine divergences are China
+        abstaining while Russia votes no.
+        """
+        if not self.comparable:
+            return float("nan")
+        return (self.identical + 0.5 * self.partial_split) / self.comparable
 
     @property
     def opposed_rate(self) -> float:
@@ -104,6 +126,7 @@ class AgreementResult:
         d = asdict(self)
         d.pop("divergences")
         d["agreement"] = round(self.agreement, 4) if self.comparable else None
+        d["s_score"] = round(self.s_score, 4) if self.comparable else None
         d["opposed_rate"] = round(self.opposed_rate, 4) if self.comparable else None
         return d
 
@@ -179,13 +202,63 @@ def compare_baselines(
     return rows
 
 
-def mean_pairwise(table: Mapping[str, Mapping[str, int]], countries: Iterable[str]) -> float:
-    """Mean pairwise agreement across a caucus -- the bloc-effect control."""
+def mean_pairwise(
+    table: Mapping[str, Mapping[str, int]],
+    countries: Iterable[str],
+    *,
+    measure: str = "agreement",
+) -> float:
+    """Mean pairwise score across a caucus -- the bloc-effect control.
+
+    `measure` must be "agreement" (exact match) or "s_score" (graded). Compare
+    like with like: an S-score for the focus dyad against an exact-match baseline
+    would flatter the dyad by roughly 15 points.
+    """
+    if measure not in ("agreement", "s_score"):
+        raise ValueError(f"unknown measure {measure!r}")
     cs = sorted({c.upper() for c in countries})
     vals = [
-        score(table, x, y, keep_divergences=False).agreement
+        getattr(score(table, x, y, keep_divergences=False), measure)
         for i, x in enumerate(cs)
         for y in cs[i + 1:]
     ]
     vals = [v for v in vals if v == v]     # drop NaN
     return sum(vals) / len(vals) if vals else float("nan")
+
+
+def withheld_from_majority(
+    table: Mapping[str, Mapping[str, int]], country: str
+) -> dict:
+    """How often a state declines to join the winning side.
+
+    Exact-match scores miss the thing that matters on lopsided votes: a state
+    that abstains against a 141-vote majority has taken a position, and it is not
+    a neutral one. This counts, over ballots the state was present for, how often
+    it voted with the majority position versus withholding (abstaining) or
+    opposing it.
+    """
+    country = country.upper()
+    with_maj = withheld = against = 0
+    for ballot in table.values():
+        v = ballot.get(country)
+        if v is None or v in (ABSENT, NOT_MEMBER):
+            continue
+        cast = [x for x in ballot.values() if x in PRESENT]
+        if not cast:
+            continue
+        majority = max(PRESENT, key=lambda opt: sum(1 for x in cast if x == opt))
+        if v == majority:
+            with_maj += 1
+        elif v == ABSTAIN:
+            withheld += 1
+        else:
+            against += 1
+    total = with_maj + withheld + against
+    return {
+        "country": country,
+        "ballots": total,
+        "with_majority": with_maj,
+        "withheld": withheld,
+        "against": against,
+        "withheld_or_against_rate": round((withheld + against) / total, 4) if total else None,
+    }

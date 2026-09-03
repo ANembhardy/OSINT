@@ -44,11 +44,35 @@ inverts. This single control is the difference between analysis and vibes.
 
 ### M3 — Divergence typology
 
+**Partial splits are partial alignment, not disagreement.** This is the single
+easiest way to get this dyad wrong. When one state votes yes or no and the other
+abstains, the abstainer is declining to endorse the text *and* declining to
+oppose it. Reporting that as a failure to agree throws away the information that
+matters.
+
+The asymmetry is sharpest in the Security Council, where a permanent member's
+"no" is a veto. **If Russia vetoes and China abstains, that is partial
+alignment**: China withholds the second veto, but also withholds support, and
+the text still dies. Coding that as divergence inverts its meaning. The only
+shape that constitutes a real public break is one permanent member vetoing while
+the other votes in favour.
+
+So every result reports two numbers:
+
+- **exact agreement** = identical / comparable
+- **S-score** (Lijphart) = (identical + 0.5 x partial split) / comparable
+
+Prefer the S-score for substantive claims. The gap between them is large and
+systematic: on the nine Ukraine emergency special session texts the pair scores
+22.2% exact and 61.1% graded. Whenever the two are compared, compare like with
+like -- an S-score for the focus dyad against an exact-match baseline flatters
+the dyad by roughly 15 points.
+
 Classify every non-identical vote:
 
 | Type | A | B | Reading |
 |---|---|---|---|
-| `partial_split` | Yes/No | Abstain | Hedging; one side declines to spend the capital |
+| `partial_split` | Yes/No | Abstain | **Partial alignment.** One side declines to spend the capital but does not oppose. In the Council, veto + abstain lands here. |
 | `opposed` | Yes | No | Genuine policy conflict |
 | `absence` | vote | absent | Usually procedural, low signal |
 
@@ -62,6 +86,22 @@ domestic legal policy, not geopolitics. **Weight divergences by whether they
 touch the dyad's shared strategic agenda.** A split on the death penalty says
 almost nothing about strategic coordination; a split on a Ukraine or Middle East
 text says a great deal.
+
+### M3b — Distance from the majority
+
+Exact-match and S-scores are both dyadic, and on lopsided votes they miss the
+thing that matters: abstaining against a 141-vote majority is a position, not
+neutrality. `agreement.withheld_from_majority` counts, per state, how often it
+joined the winning side versus withheld (abstained) or opposed.
+
+This measure also supplies its own base rate, which matters. On the nine Ukraine
+emergency special session texts China never once joined the majority -- but
+neither did 28 other states, India among them, so abstention alone is weak
+evidence of coordination with Moscow. What is rarer is voting *against*: only 16
+states opposed two or more ES-11 texts, and that list is Russia, Belarus, the
+DPRK, Syria, Iran, Cuba, Nicaragua, Zimbabwe, Eritrea and a handful of others --
+plus China, the only major economy in it besides Russia. **The abstentions are
+unremarkable; the two no votes are the signal.**
 
 ### M4 — Security Council behaviour
 

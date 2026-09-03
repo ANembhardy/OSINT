@@ -138,6 +138,9 @@ def cmd_unsc(args) -> int:
         else:
             split["other"] += 1
     out["split_direction"] = split
+    out["withheld_from_majority_contested"] = {
+        c: agreement.withheld_from_majority(tbl, c) for c in (args.a, args.b)
+    }
     out["abstention_rate_contested"] = {
         c: round(sum(1 for b in con if b.votes.get(c) == agreement.ABSTAIN) / len(con), 4)
         for c in (args.a, args.b, "USA", "GBR", "FRA")
@@ -206,7 +209,13 @@ def cmd_ga(args) -> int:
         agreement.score(con, x, y, keep_divergences=False).summary()
         for x, y in ((args.a, args.b), *GA_BASELINES)
     ]
-    out["g77_mean_pairwise_contested"] = round(agreement.mean_pairwise(con, G77_SAMPLE), 4)
+    out["g77_mean_pairwise_contested"] = {
+        "agreement": round(agreement.mean_pairwise(con, G77_SAMPLE), 4),
+        "s_score": round(agreement.mean_pairwise(con, G77_SAMPLE, measure="s_score"), 4),
+    }
+    out["withheld_from_majority_contested"] = {
+        c: agreement.withheld_from_majority(con, c) for c in (args.a, args.b)
+    }
 
     # Per-session trend on regular sessions only.
     sess = ga.sessions(regular)
@@ -231,9 +240,15 @@ def cmd_ga(args) -> int:
                        if r.session_kind == "emergency_special"}):
         sub = [r for r in scoped
                if r.session_kind == "emergency_special" and r.session_number == num]
-        r = agreement.score(ga.to_vote_table(sub), args.a, args.b, keep_divergences=False)
+        t = ga.to_vote_table(sub)
+        r = agreement.score(t, args.a, args.b, keep_divergences=False)
         if r.comparable:
-            out["emergency_special"][f"ES-{num}"] = r.summary()
+            out["emergency_special"][f"ES-{num}"] = r.summary() | {
+                "resolutions": len(sub),
+                "withheld_from_majority": {
+                    c: agreement.withheld_from_majority(t, c) for c in (args.a, args.b)
+                },
+            }
 
     _print(out)
     return 0

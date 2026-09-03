@@ -2,6 +2,14 @@
   "source": "data/raw/2026_02_06_ga_voting.csv.gz",
   "citation": "United Nations Dag Hammarskjold Library, General Assembly Voting Data, United Nations, version 5 (February 2026), 2026, downloaded from https://digitallibrary.un.org/record/4060887",
   "resolutions_total": 5694,
+  "window": [
+    "1992-01-01",
+    "2100-01-01"
+  ],
+  "window_actual": [
+    "1992-08-25",
+    "2025-12-18"
+  ],
   "in_scope": 2802,
   "contested_ballots": 1489,
   "contested_share": 0.5314,
@@ -19,6 +27,7 @@
     "opposed": 149,
     "absence": 47,
     "agreement": 0.7114,
+    "s_score": 0.8286,
     "opposed_rate": 0.0542
   },
   "contested_only": {
@@ -30,6 +39,7 @@
     "opposed": 128,
     "absence": 32,
     "agreement": 0.5841,
+    "s_score": 0.7481,
     "opposed_rate": 0.0879
   },
   "baselines_contested": [
@@ -42,6 +52,7 @@
       "opposed": 128,
       "absence": 32,
       "agreement": 0.5841,
+      "s_score": 0.7481,
       "opposed_rate": 0.0879
     },
     {
@@ -53,6 +64,7 @@
       "opposed": 141,
       "absence": 6,
       "agreement": 0.5165,
+      "s_score": 0.7107,
       "opposed_rate": 0.0951
     },
     {
@@ -64,6 +76,7 @@
       "opposed": 34,
       "absence": 28,
       "agreement": 0.7817,
+      "s_score": 0.8792,
       "opposed_rate": 0.0233
     },
     {
@@ -75,6 +88,7 @@
       "opposed": 128,
       "absence": 32,
       "agreement": 0.6609,
+      "s_score": 0.7865,
       "opposed_rate": 0.0879
     },
     {
@@ -86,6 +100,7 @@
       "opposed": 216,
       "absence": 64,
       "agreement": 0.5365,
+      "s_score": 0.6924,
       "opposed_rate": 0.1517
     },
     {
@@ -97,6 +112,7 @@
       "opposed": 30,
       "absence": 33,
       "agreement": 0.8329,
+      "s_score": 0.9061,
       "opposed_rate": 0.0206
     },
     {
@@ -108,6 +124,7 @@
       "opposed": 77,
       "absence": 116,
       "agreement": 0.7036,
+      "s_score": 0.8237,
       "opposed_rate": 0.0562
     },
     {
@@ -119,6 +136,7 @@
       "opposed": 123,
       "absence": 9,
       "agreement": 0.6872,
+      "s_score": 0.802,
       "opposed_rate": 0.0831
     },
     {
@@ -130,10 +148,32 @@
       "opposed": 19,
       "absence": 11,
       "agreement": 0.8823,
+      "s_score": 0.9347,
       "opposed_rate": 0.0129
     }
   ],
-  "g77_mean_pairwise_contested": 0.8216,
+  "g77_mean_pairwise_contested": {
+    "agreement": 0.8216,
+    "s_score": 0.8996
+  },
+  "withheld_from_majority_contested": {
+    "RUS": {
+      "country": "RUS",
+      "ballots": 1484,
+      "with_majority": 716,
+      "withheld": 417,
+      "against": 351,
+      "withheld_or_against_rate": 0.5175
+    },
+    "CHN": {
+      "country": "CHN",
+      "ballots": 1462,
+      "with_majority": 1064,
+      "withheld": 205,
+      "against": 193,
+      "withheld_or_against_rate": 0.2722
+    }
+  },
   "by_session_regular": {
     "47": {
       "raw": 0.4366,
@@ -350,7 +390,27 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.9231,
-      "opposed_rate": 0.0
+      "s_score": 0.9615,
+      "opposed_rate": 0.0,
+      "resolutions": 26,
+      "withheld_from_majority": {
+        "RUS": {
+          "country": "RUS",
+          "ballots": 26,
+          "with_majority": 24,
+          "withheld": 2,
+          "against": 0,
+          "withheld_or_against_rate": 0.0769
+        },
+        "CHN": {
+          "country": "CHN",
+          "ballots": 26,
+          "with_majority": 26,
+          "withheld": 0,
+          "against": 0,
+          "withheld_or_against_rate": 0.0
+        }
+      }
     },
     "ES-11": {
       "a": "RUS",
@@ -361,7 +421,27 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.2222,
-      "opposed_rate": 0.0
+      "s_score": 0.6111,
+      "opposed_rate": 0.0,
+      "resolutions": 9,
+      "withheld_from_majority": {
+        "RUS": {
+          "country": "RUS",
+          "ballots": 9,
+          "with_majority": 0,
+          "withheld": 0,
+          "against": 9,
+          "withheld_or_against_rate": 1.0
+        },
+        "CHN": {
+          "country": "CHN",
+          "ballots": 9,
+          "with_majority": 0,
+          "withheld": 7,
+          "against": 2,
+          "withheld_or_against_rate": 1.0
+        }
+      }
     }
   }
 }

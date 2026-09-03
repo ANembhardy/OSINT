@@ -27,6 +27,7 @@
     "opposed": 45,
     "absence": 3,
     "agreement": 0.7294,
+    "s_score": 0.8236,
     "opposed_rate": 0.0823
   },
   "contested_only": {
@@ -38,6 +39,7 @@
     "opposed": 33,
     "absence": 3,
     "agreement": 0.6805,
+    "s_score": 0.7875,
     "opposed_rate": 0.1054
   },
   "baselines_contested": [
@@ -50,6 +52,7 @@
       "opposed": 33,
       "absence": 3,
       "agreement": 0.6805,
+      "s_score": 0.7875,
       "opposed_rate": 0.1054
     },
     {
@@ -61,6 +64,7 @@
       "opposed": 35,
       "absence": 0,
       "agreement": 0.5316,
+      "s_score": 0.7104,
       "opposed_rate": 0.1108
     },
     {
@@ -72,6 +76,7 @@
       "opposed": 14,
       "absence": 3,
       "agreement": 0.6677,
+      "s_score": 0.8115,
       "opposed_rate": 0.0447
     },
     {
@@ -83,6 +88,7 @@
       "opposed": 33,
       "absence": 5,
       "agreement": 0.5981,
+      "s_score": 0.746,
       "opposed_rate": 0.1061
     },
     {
@@ -94,6 +100,7 @@
       "opposed": 48,
       "absence": 16,
       "agreement": 0.6533,
+      "s_score": 0.7467,
       "opposed_rate": 0.16
     },
     {
@@ -105,6 +112,7 @@
       "opposed": 11,
       "absence": 6,
       "agreement": 0.7806,
+      "s_score": 0.8726,
       "opposed_rate": 0.0355
     },
     {
@@ -116,6 +124,7 @@
       "opposed": 25,
       "absence": 5,
       "agreement": 0.6817,
+      "s_score": 0.8006,
       "opposed_rate": 0.0804
     },
     {
@@ -127,6 +136,7 @@
       "opposed": 42,
       "absence": 3,
       "agreement": 0.7348,
+      "s_score": 0.8003,
       "opposed_rate": 0.1342
     },
     {
@@ -138,10 +148,32 @@
       "opposed": 1,
       "absence": 0,
       "agreement": 0.8861,
+      "s_score": 0.9415,
       "opposed_rate": 0.0032
     }
   ],
-  "g77_mean_pairwise_contested": 0.793,
+  "g77_mean_pairwise_contested": {
+    "agreement": 0.793,
+    "s_score": 0.8839
+  },
+  "withheld_from_majority_contested": {
+    "RUS": {
+      "country": "RUS",
+      "ballots": 316,
+      "with_majority": 157,
+      "withheld": 42,
+      "against": 117,
+      "withheld_or_against_rate": 0.5032
+    },
+    "CHN": {
+      "country": "CHN",
+      "ballots": 313,
+      "with_majority": 210,
+      "withheld": 51,
+      "against": 52,
+      "withheld_or_against_rate": 0.3291
+    }
+  },
   "by_session_regular": {
     "76": {
       "raw": 0.7875,
@@ -184,7 +216,27 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 1.0,
-      "opposed_rate": 0.0
+      "s_score": 1.0,
+      "opposed_rate": 0.0,
+      "resolutions": 7,
+      "withheld_from_majority": {
+        "RUS": {
+          "country": "RUS",
+          "ballots": 7,
+          "with_majority": 7,
+          "withheld": 0,
+          "against": 0,
+          "withheld_or_against_rate": 0.0
+        },
+        "CHN": {
+          "country": "CHN",
+          "ballots": 7,
+          "with_majority": 7,
+          "withheld": 0,
+          "against": 0,
+          "withheld_or_against_rate": 0.0
+        }
+      }
     },
     "ES-11": {
       "a": "RUS",
@@ -195,7 +247,27 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.2222,
-      "opposed_rate": 0.0
+      "s_score": 0.6111,
+      "opposed_rate": 0.0,
+      "resolutions": 9,
+      "withheld_from_majority": {
+        "RUS": {
+          "country": "RUS",
+          "ballots": 9,
+          "with_majority": 0,
+          "withheld": 0,
+          "against": 9,
+          "withheld_or_against_rate": 1.0
+        },
+        "CHN": {
+          "country": "CHN",
+          "ballots": 9,
+          "with_majority": 0,
+          "withheld": 7,
+          "against": 2,
+          "withheld_or_against_rate": 1.0
+        }
+      }
     }
   }
 }

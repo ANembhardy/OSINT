@@ -22,6 +22,7 @@
     "opposed": 0,
     "absence": 0,
     "agreement": 0.95,
+    "s_score": 0.975,
     "opposed_rate": 0.0
   },
   "contested_only": {
@@ -33,6 +34,7 @@
     "opposed": 0,
     "absence": 0,
     "agreement": 0.5785,
+    "s_score": 0.7893,
     "opposed_rate": 0.0
   },
   "baselines_contested": [
@@ -45,6 +47,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.5785,
+      "s_score": 0.7893,
       "opposed_rate": 0.0
     },
     {
@@ -56,6 +59,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.9256,
+      "s_score": 0.9628,
       "opposed_rate": 0.0
     },
     {
@@ -67,6 +71,7 @@
       "opposed": 0,
       "absence": 1,
       "agreement": 0.8963,
+      "s_score": 0.9481,
       "opposed_rate": 0.0
     },
     {
@@ -78,6 +83,7 @@
       "opposed": 0,
       "absence": 1,
       "agreement": 0.9627,
+      "s_score": 0.9813,
       "opposed_rate": 0.0
     },
     {
@@ -89,6 +95,7 @@
       "opposed": 1,
       "absence": 0,
       "agreement": 0.3388,
+      "s_score": 0.6674,
       "opposed_rate": 0.0041
     },
     {
@@ -100,6 +107,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.4339,
+      "s_score": 0.7169,
       "opposed_rate": 0.0
     }
   ],
@@ -107,6 +115,24 @@
     "a_yes_b_abstain": 37,
     "b_yes_a_abstain": 64,
     "other": 1
+  },
+  "withheld_from_majority_contested": {
+    "RUS": {
+      "country": "RUS",
+      "ballots": 242,
+      "with_majority": 93,
+      "withheld": 148,
+      "against": 1,
+      "withheld_or_against_rate": 0.6157
+    },
+    "CHN": {
+      "country": "CHN",
+      "ballots": 242,
+      "with_majority": 120,
+      "withheld": 122,
+      "against": 0,
+      "withheld_or_against_rate": 0.5041
+    }
   },
   "abstention_rate_contested": {
     "RUS": 0.6116,
@@ -125,6 +151,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.2963,
+      "s_score": 0.6481,
       "opposed_rate": 0.0
     },
     "1995-1999": {
@@ -136,6 +163,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.4333,
+      "s_score": 0.7167,
       "opposed_rate": 0.0
     },
     "2000-2004": {
@@ -147,6 +175,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.75,
+      "s_score": 0.875,
       "opposed_rate": 0.0
     },
     "2005-2009": {
@@ -158,6 +187,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.7222,
+      "s_score": 0.8611,
       "opposed_rate": 0.0
     },
     "2010-2014": {
@@ -169,6 +199,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.6,
+      "s_score": 0.8,
       "opposed_rate": 0.0
     },
     "2015-2019": {
@@ -180,6 +211,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.5946,
+      "s_score": 0.7973,
       "opposed_rate": 0.0
     },
     "2020-2024": {
@@ -191,6 +223,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.5775,
+      "s_score": 0.7887,
       "opposed_rate": 0.0
     },
     "2025-2029": {
@@ -202,6 +235,7 @@
       "opposed": 0,
       "absence": 0,
       "agreement": 0.8421,
+      "s_score": 0.9211,
       "opposed_rate": 0.0
     }
   }

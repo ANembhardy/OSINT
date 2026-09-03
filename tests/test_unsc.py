@@ -330,3 +330,100 @@ def test_window_unsc_us_russia_alignment_collapses(ballots):
 def test_window_unsc_never_opposed(ballots):
     con = unsc.contested([b for b in ballots if b.date >= WINDOW])
     assert ag.score(unsc.to_vote_table(con), "RUS", "CHN").opposed == 0
+
+
+# --------------------------------------------------------------------------- #
+# Partial splits are partial alignment (docs/03-findings-2026-09.md section 1.0)
+# --------------------------------------------------------------------------- #
+
+def test_s_score_credits_partial_alignment():
+    """Veto + abstain must not score as total disagreement."""
+    table = {
+        "identical": {"RUS": ag.NO, "CHN": ag.NO},
+        "veto_plus_abstain": {"RUS": ag.NO, "CHN": ag.ABSTAIN},
+        "opposed": {"RUS": ag.NO, "CHN": ag.YES},
+    }
+    r = ag.score(table, "RUS", "CHN")
+    assert r.identical == 1 and r.partial_split == 1 and r.opposed == 1
+    assert r.agreement == pytest.approx(1 / 3)
+    assert r.s_score == pytest.approx(0.5)       # 1 + 0.5 + 0, over 3
+    assert r.s_score > r.agreement
+
+
+def test_s_score_bounds():
+    allsame = {"a": {"X": ag.YES, "Y": ag.YES}}
+    allopp = {"a": {"X": ag.YES, "Y": ag.NO}}
+    assert ag.score(allsame, "X", "Y").s_score == 1.0
+    assert ag.score(allopp, "X", "Y").s_score == 0.0
+
+
+def test_summary_exposes_both_measures():
+    d = ag.score({"a": {"X": ag.YES, "Y": ag.ABSTAIN}}, "X", "Y").summary()
+    assert d["agreement"] == 0.0 and d["s_score"] == 0.5
+
+
+def test_mean_pairwise_rejects_mismatched_measure():
+    with pytest.raises(ValueError):
+        ag.mean_pairwise({}, ["A", "B"], measure="exact")
+
+
+@ga_only
+def test_ukraine_graded_score_is_far_higher_than_exact(resolutions):
+    """The figure an earlier draft leaned on understated alignment by 39 points."""
+    es11 = [r for r in resolutions
+            if r.session_kind == "emergency_special" and r.session_number == 11]
+    r = ag.score(ga.to_vote_table(es11), "RUS", "CHN")
+
+    assert r.agreement == pytest.approx(0.222, abs=0.002)
+    assert r.s_score == pytest.approx(0.611, abs=0.002)
+    assert r.opposed == 0                     # never on opposite sides, even here
+    assert r.partial_split == 7
+
+
+@ga_only
+def test_china_never_joined_the_majority_on_ukraine(resolutions):
+    es11 = [r for r in resolutions
+            if r.session_kind == "emergency_special" and r.session_number == 11]
+    prof = ag.withheld_from_majority(ga.to_vote_table(es11), "CHN")
+
+    assert prof["ballots"] == 9
+    assert prof["with_majority"] == 0
+    assert prof["withheld"] == 7 and prof["against"] == 2
+
+
+@ga_only
+def test_ukraine_abstention_is_common_but_opposition_is_rare(resolutions):
+    """The base rate that cuts the finding down: 29 states withheld, only 16 opposed twice."""
+    es11 = [r for r in resolutions
+            if r.session_kind == "emergency_special" and r.session_number == 11]
+    tbl = ga.to_vote_table(es11, china_seat=None, russia_actor="spliced")
+    codes = sorted({c for b in tbl.values() for c in b})
+    profiles = [ag.withheld_from_majority(tbl, c) for c in codes]
+    present = [p for p in profiles if p["ballots"] >= 8]
+
+    never_with_majority = [p for p in present if p["with_majority"] == 0]
+    hard_no = [p for p in present if p["against"] >= 2]
+
+    assert len(never_with_majority) == 29          # India among them
+    assert "IND" in {p["country"] for p in never_with_majority}
+    assert len(hard_no) == 16                      # China among them, India not
+    assert {"CHN", "RUS", "BLR", "PRK", "SYR", "IRN"} <= {p["country"] for p in hard_no}
+    assert "IND" not in {p["country"] for p in hard_no}
+
+
+def test_veto_table_codes_veto_plus_abstain_as_partial():
+    """The 2022 Ukraine annexation vote: Russia veto, China abstain."""
+    import csv
+    rows = list(csv.DictReader((ROOT / "data" / "seed" / "unsc_actions.csv").open(encoding="utf-8")))
+    by_date = {r["date"]: r for r in rows}
+
+    ukraine = by_date["2022-09-30"]
+    assert ukraine["russia_vote"] == "veto" and ukraine["china_vote"] == "abstain"
+    assert ukraine["alignment"] == "partial"
+    assert ukraine["alignment_basis"] == "one_veto_one_abstain"
+
+    for r in rows:
+        if {r["russia_vote"], r["china_vote"]} == {"veto", "abstain"}:
+            assert r["alignment"] == "partial", f"{r['date']} miscoded as {r['alignment']}"
+        if r["russia_vote"] == "veto" and r["china_vote"] == "veto":
+            assert r["alignment"] == "joint"

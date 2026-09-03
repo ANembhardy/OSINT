@@ -52,6 +52,22 @@ PYTHONPATH=src python3 -m rcwatch agreement \
     --votes out/votes_2025.csv --contested --baselines
 ```
 
+## Two measures, always reported together
+
+- **exact** — identical votes / comparable votes
+- **S-score** (Lijphart) — identical + 0.5 x partial split, over comparable votes
+
+A partial split (one votes yes or no, the other abstains) is **partial
+alignment**, not disagreement. In the Security Council this matters most: a
+permanent member's "no" is a veto, so **Russia vetoing while China abstains is
+partial alignment** -- the draft dies either way and China has denied it the
+weight of a Council united but for Russia. Only a veto met by the other's *yes*
+would be a real break, and that has never happened.
+
+The gap between the measures is large: on the nine Ukraine emergency special
+session texts the pair scores 22.2% exact and 61.1% graded. Baselines are always
+computed on the same measure as the focus dyad.
+
 ## The one idea worth taking away
 
 Vote agreement is the weakest available evidence of coordination and the most
@@ -91,11 +107,14 @@ Full series (1992-2025/26):
 2. **The published "77% to 67% decline" is mostly a subsetting artefact.** It
    reproduces on the raw series (77.9% to 66.7%, 2018-2024) and nearly vanishes
    on contested votes (66.7% to 64.9%).
-3. **Alignment is issue-contingent, sharply.** Emergency special session ES-10
-   (Palestine): 92.3% agreement. ES-11 (Ukraine): 22.2%. China joined Russia in
-   voting no on exactly two of nine Ukraine texts -- the Human Rights Council
-   suspension and the reparations mechanism -- both precedent-setting rather than
-   condemnatory.
+3. **Alignment is issue-contingent.** ES-10 (Palestine): 96.2% graded. ES-11
+   (Ukraine): 61.1% graded, 22.2% exact. **China never joined the Assembly
+   majority on any of the nine Ukraine texts** -- but nor did 28 other states,
+   India included, so abstention is weak evidence of coordination. What is rare
+   is opposition: only 16 states voted no on two or more ES-11 texts, and China
+   is the only major economy on that list besides Russia. Its two no votes were
+   the Human Rights Council suspension and the reparations mechanism -- both
+   precedent-setting rather than condemnatory.
 
 Restricted to **2021-2026** (see `docs/03-findings-2026-09.md` section 1.6), the
 dyad is *tighter*, not looser: contested GA agreement rises to 68.1% and Council
