@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Joint document",
+  "type": "object",
+  "required": ["date_signed", "title", "evidence_tier", "verification"],
+  "properties": {
+    "date_signed": {"type": "string", "format": "date"},
+    "date_circulated": {"type": ["string", "null"], "format": "date",
+                        "description": "Date transmitted to the UN as a joint letter, when applicable. The gap between signature and circulation is itself informative."},
+    "title": {"type": "string"},
+    "place": {"type": "string"},
+    "forum": {"enum": ["bilateral", "bilateral -> UN", "SCO", "BRICS", "other"]},
+    "un_symbol_record": {"type": "string", "description": "UN Digital Library record id or document symbol."},
+    "evidence_tier": {"type": "integer", "minimum": 1, "maximum": 6,
+                      "description": "Coordination-evidence tier, 1 strongest. See docs/02-source-inventory.md."},
+    "summary": {"type": "string"},
+    "source_url": {"type": "string"},
+    "verification": {"enum": ["verified", "pending_primary", "low_confidence_date", "disputed"]}
+  }
+}

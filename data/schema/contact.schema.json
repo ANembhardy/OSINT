@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ANembhardy/OSINT/data/schema/contact.schema.json",
+  "title": "Bilateral diplomatic contact",
+  "type": "object",
+  "required": ["date", "level", "host_country", "venue_type", "participants", "verification"],
+  "properties": {
+    "date": {"type": "string", "format": "date"},
+    "end_date": {"type": ["string", "null"], "format": "date"},
+    "level": {"enum": ["leader", "head_of_government", "deputy_head_of_government", "foreign_minister", "deputy_foreign_minister", "security_council", "defence", "party"]},
+    "host_country": {"type": "string", "pattern": "^[A-Z]{2}$"},
+    "city": {"type": "string"},
+    "venue_type": {"enum": ["state_visit", "bilateral_visit", "summit_pullaside", "commemorative", "virtual"],
+                   "description": "The dedicated-visit vs pull-aside distinction is the main signal here and is routinely lost in press coverage."},
+    "participants": {"type": "string"},
+    "multilateral_host": {"type": "string", "description": "Required when venue_type is summit_pullaside."},
+    "documents_signed": {"type": "integer", "minimum": 0},
+    "summary": {"type": "string"},
+    "source_url": {"type": "string"},
+    "source_type": {"enum": ["state_primary", "un_primary", "news", "analysis", ""]},
+    "verification": {"enum": ["verified", "pending_primary", "low_confidence_date", "disputed"]}
+  }
+}

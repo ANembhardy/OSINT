@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Security Council action",
+  "type": "object",
+  "required": ["date", "subject", "russia_vote", "china_vote", "alignment", "verification"],
+  "properties": {
+    "date": {"type": "string"},
+    "symbol_or_topic": {"type": "string"},
+    "subject": {"type": "string"},
+    "russia_vote": {"enum": ["yes", "no", "abstain", "veto", "absent"]},
+    "china_vote": {"enum": ["yes", "no", "abstain", "veto", "absent"]},
+    "outcome": {"enum": ["adopted", "blocked", "withdrawn", "not_tabled"]},
+    "alignment": {"enum": ["joint", "divergent", "partial"]},
+    "notes": {"type": "string"},
+    "source_url": {"type": "string"},
+    "verification": {"enum": ["verified", "pending_primary", "low_confidence_date", "disputed"]}
+  }
+}
