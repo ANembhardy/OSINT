@@ -1,0 +1,367 @@
+{
+  "source": "data/raw/2026_02_06_ga_voting.csv.gz",
+  "citation": "United Nations Dag Hammarskjold Library, General Assembly Voting Data, United Nations, version 5 (February 2026), 2026, downloaded from https://digitallibrary.un.org/record/4060887",
+  "resolutions_total": 5694,
+  "in_scope": 2802,
+  "contested_ballots": 1489,
+  "contested_share": 0.5314,
+  "session_kinds": {
+    "regular": 2767,
+    "special": 0,
+    "emergency_special": 35
+  },
+  "all_recorded": {
+    "a": "RUS",
+    "b": "CHN",
+    "comparable": 2751,
+    "identical": 1957,
+    "partial_split": 645,
+    "opposed": 149,
+    "absence": 47,
+    "agreement": 0.7114,
+    "opposed_rate": 0.0542
+  },
+  "contested_only": {
+    "a": "RUS",
+    "b": "CHN",
+    "comparable": 1457,
+    "identical": 851,
+    "partial_split": 478,
+    "opposed": 128,
+    "absence": 32,
+    "agreement": 0.5841,
+    "opposed_rate": 0.0879
+  },
+  "baselines_contested": [
+    {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 1457,
+      "identical": 851,
+      "partial_split": 478,
+      "opposed": 128,
+      "absence": 32,
+      "agreement": 0.5841,
+      "opposed_rate": 0.0879
+    },
+    {
+      "a": "RUS",
+      "b": "IND",
+      "comparable": 1483,
+      "identical": 766,
+      "partial_split": 576,
+      "opposed": 141,
+      "absence": 6,
+      "agreement": 0.5165,
+      "opposed_rate": 0.0951
+    },
+    {
+      "a": "CHN",
+      "b": "IND",
+      "comparable": 1461,
+      "identical": 1142,
+      "partial_split": 285,
+      "opposed": 34,
+      "absence": 28,
+      "agreement": 0.7817,
+      "opposed_rate": 0.0233
+    },
+    {
+      "a": "CHN",
+      "b": "BRA",
+      "comparable": 1457,
+      "identical": 963,
+      "partial_split": 366,
+      "opposed": 128,
+      "absence": 32,
+      "agreement": 0.6609,
+      "opposed_rate": 0.0879
+    },
+    {
+      "a": "RUS",
+      "b": "IRN",
+      "comparable": 1424,
+      "identical": 764,
+      "partial_split": 444,
+      "opposed": 216,
+      "absence": 64,
+      "agreement": 0.5365,
+      "opposed_rate": 0.1517
+    },
+    {
+      "a": "CHN",
+      "b": "PAK",
+      "comparable": 1454,
+      "identical": 1211,
+      "partial_split": 213,
+      "opposed": 30,
+      "absence": 33,
+      "agreement": 0.8329,
+      "opposed_rate": 0.0206
+    },
+    {
+      "a": "CHN",
+      "b": "ZAF",
+      "comparable": 1370,
+      "identical": 964,
+      "partial_split": 329,
+      "opposed": 77,
+      "absence": 116,
+      "agreement": 0.7036,
+      "opposed_rate": 0.0562
+    },
+    {
+      "a": "USA",
+      "b": "GBR",
+      "comparable": 1480,
+      "identical": 1017,
+      "partial_split": 340,
+      "opposed": 123,
+      "absence": 9,
+      "agreement": 0.6872,
+      "opposed_rate": 0.0831
+    },
+    {
+      "a": "FRA",
+      "b": "DEU",
+      "comparable": 1478,
+      "identical": 1304,
+      "partial_split": 155,
+      "opposed": 19,
+      "absence": 11,
+      "agreement": 0.8823,
+      "opposed_rate": 0.0129
+    }
+  ],
+  "g77_mean_pairwise_contested": 0.8216,
+  "by_session_regular": {
+    "47": {
+      "raw": 0.4366,
+      "raw_n": 71,
+      "contested": 0.2564,
+      "contested_n": 39
+    },
+    "48": {
+      "raw": 0.371,
+      "raw_n": 62,
+      "contested": 0.1622,
+      "contested_n": 37
+    },
+    "49": {
+      "raw": 0.4697,
+      "raw_n": 66,
+      "contested": 0.2647,
+      "contested_n": 34
+    },
+    "50": {
+      "raw": 0.481,
+      "raw_n": 79,
+      "contested": 0.1429,
+      "contested_n": 35
+    },
+    "51": {
+      "raw": 0.5733,
+      "raw_n": 75,
+      "contested": 0.3333,
+      "contested_n": 36
+    },
+    "52": {
+      "raw": 0.6087,
+      "raw_n": 69,
+      "contested": 0.3784,
+      "contested_n": 37
+    },
+    "53": {
+      "raw": 0.6271,
+      "raw_n": 59,
+      "contested": 0.3846,
+      "contested_n": 26
+    },
+    "54": {
+      "raw": 0.6377,
+      "raw_n": 69,
+      "contested": 0.4062,
+      "contested_n": 32
+    },
+    "55": {
+      "raw": 0.7727,
+      "raw_n": 66,
+      "contested": 0.6071,
+      "contested_n": 28
+    },
+    "56": {
+      "raw": 0.7727,
+      "raw_n": 66,
+      "contested": 0.6061,
+      "contested_n": 33
+    },
+    "57": {
+      "raw": 0.7714,
+      "raw_n": 70,
+      "contested": 0.5758,
+      "contested_n": 33
+    },
+    "58": {
+      "raw": 0.7333,
+      "raw_n": 75,
+      "contested": 0.5526,
+      "contested_n": 38
+    },
+    "59": {
+      "raw": 0.7681,
+      "raw_n": 69,
+      "contested": 0.5882,
+      "contested_n": 34
+    },
+    "60": {
+      "raw": 0.7703,
+      "raw_n": 74,
+      "contested": 0.5833,
+      "contested_n": 36
+    },
+    "61": {
+      "raw": 0.8351,
+      "raw_n": 97,
+      "contested": 0.6842,
+      "contested_n": 38
+    },
+    "62": {
+      "raw": 0.7692,
+      "raw_n": 78,
+      "contested": 0.5714,
+      "contested_n": 35
+    },
+    "63": {
+      "raw": 0.7973,
+      "raw_n": 74,
+      "contested": 0.7143,
+      "contested_n": 35
+    },
+    "64": {
+      "raw": 0.7536,
+      "raw_n": 69,
+      "contested": 0.6216,
+      "contested_n": 37
+    },
+    "65": {
+      "raw": 0.7778,
+      "raw_n": 72,
+      "contested": 0.6061,
+      "contested_n": 33
+    },
+    "66": {
+      "raw": 0.8143,
+      "raw_n": 70,
+      "contested": 0.725,
+      "contested_n": 40
+    },
+    "67": {
+      "raw": 0.7286,
+      "raw_n": 70,
+      "contested": 0.5946,
+      "contested_n": 37
+    },
+    "68": {
+      "raw": 0.7188,
+      "raw_n": 64,
+      "contested": 0.5429,
+      "contested_n": 35
+    },
+    "69": {
+      "raw": 0.7013,
+      "raw_n": 77,
+      "contested": 0.6047,
+      "contested_n": 43
+    },
+    "70": {
+      "raw": 0.7162,
+      "raw_n": 74,
+      "contested": 0.6136,
+      "contested_n": 44
+    },
+    "71": {
+      "raw": 0.6951,
+      "raw_n": 82,
+      "contested": 0.5532,
+      "contested_n": 47
+    },
+    "72": {
+      "raw": 0.7789,
+      "raw_n": 95,
+      "contested": 0.6667,
+      "contested_n": 51
+    },
+    "73": {
+      "raw": 0.787,
+      "raw_n": 108,
+      "contested": 0.75,
+      "contested_n": 68
+    },
+    "74": {
+      "raw": 0.7935,
+      "raw_n": 92,
+      "contested": 0.7581,
+      "contested_n": 62
+    },
+    "75": {
+      "raw": 0.7822,
+      "raw_n": 101,
+      "contested": 0.7407,
+      "contested_n": 54
+    },
+    "76": {
+      "raw": 0.7875,
+      "raw_n": 80,
+      "contested": 0.72,
+      "contested_n": 50
+    },
+    "77": {
+      "raw": 0.7011,
+      "raw_n": 87,
+      "contested": 0.6949,
+      "contested_n": 59
+    },
+    "78": {
+      "raw": 0.6667,
+      "raw_n": 84,
+      "contested": 0.6491,
+      "contested_n": 57
+    },
+    "79": {
+      "raw": 0.7232,
+      "raw_n": 112,
+      "contested": 0.6825,
+      "contested_n": 63
+    },
+    "80": {
+      "raw": 0.7736,
+      "raw_n": 159,
+      "contested": 0.6825,
+      "contested_n": 63
+    }
+  },
+  "emergency_special": {
+    "ES-10": {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 26,
+      "identical": 24,
+      "partial_split": 2,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.9231,
+      "opposed_rate": 0.0
+    },
+    "ES-11": {
+      "a": "RUS",
+      "b": "CHN",
+      "comparable": 9,
+      "identical": 2,
+      "partial_split": 7,
+      "opposed": 0,
+      "absence": 0,
+      "agreement": 0.2222,
+      "opposed_rate": 0.0
+    }
+  }
+}

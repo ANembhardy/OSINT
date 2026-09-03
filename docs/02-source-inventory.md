@@ -16,7 +16,8 @@ Legend for **Tier**:
 
 | Source | Tier | Access | Notes |
 |---|---|---|---|
-| **Voeten UNGA Voting Data** (Harvard Dataverse, `doi:10.7910/DVN/LEJUQZ`) | A | Dataverse API / bulk `.tab`, `.dta` | The canonical dataset. One row per country per roll-call, 1946–present, plus `ideal point` estimates. This is what published alignment percentages are computed from. Annual refresh, lags ~1 year. |
+| **UN Dag Hammarskjold Library, GA Voting Data** (UNDL record `4060887`) | A | Bulk CSV, versioned | **Use this first.** The publisher's own dataset: 947,434 rows, resolution 1 (1946) to 80/246 (Dec 2025), version 5 published Feb 2026. Currency beats Voeten by roughly a year. Held here as `data/raw/2026_02_06_ga_voting.csv.gz`; codebook mirrored at `docs/reference/ga_voting_codebook_v5.md`. Non-commercial use with attribution — cite as `rcwatch.ga.CITATION`. |
+| **Voeten UNGA Voting Data** (Harvard Dataverse, `doi:10.7910/DVN/LEJUQZ`) | A | Dataverse API / bulk `.tab`, `.dta` | Still worth having for the **ideal-point estimates**, which the DHL export does not provide, and for continuity with the published literature. Lags ~1 year, so use DHL for the recent tail. |
 | **UN Digital Library (UNDL)** `digitallibrary.un.org` | A | REST search + MARCXML (`&of=xm`), OAI-PMH | Authoritative per-resolution record: document symbol, date, title, subject headings, and the **vote breakdown field (MARC 967)**. Use to extend Voeten past its lag and to resolve symbols. |
 | **UN Documentation Research Guides** (`research.un.org`) | B | HTML | Maps sessions → symbols → meeting records. Needed to join votes to the verbatim record (`A/xx/PV.yy`). |
 | **US State Dept, *Voting Practices in the United Nations*** | A | Annual PDF + tables | Publishes "voting coincidence" scores. Useful as an **independently computed baseline** to validate your own agreement math. |
@@ -32,7 +33,8 @@ Russia–China relationship or just a shared Global South bloc position.
 
 | Source | Tier | Access | Notes |
 |---|---|---|---|
-| **UNSC veto list** (`main.un.org/securitycouncil/en/content/veto`) + Dag Hammarskjöld Library veto table | A | HTML table, stable | Full historical veto record with symbol, date, subject, and which P5 member(s) vetoed. Small enough to maintain as a CSV. |
+| **UNDL Security Council voting export** | A | Bulk CSV | 41,349 rows / 2,815 ballots, 1946 to Jan 2026. Held as `data/raw/2026_02_06_sc_voting.csv.gz`. **Adopted resolutions only — see the warning below.** |
+| **UNSC veto list** (`main.un.org/securitycouncil/en/content/veto`) + Dag Hammarskjöld Library veto table | A | HTML table, stable | Full historical veto record with symbol, date, subject, and which P5 member(s) vetoed. **This is the only route to vetoes**, because the voting exports exclude them. Small enough to maintain as a CSV. |
 | **UNDL, filtered to S/ symbols** | A | MARCXML | Per-draft vote breakdown including abstentions — abstention patterns are more informative than vetoes because they are more frequent. |
 | **Security Council Report** `securitycouncilreport.org` | B/C | Monthly Forecast, "In Hindsight" | Best open source on *penholdership*, negotiation history, and who blocked what in closed consultations — i.e. the coordination that never reaches a vote. |
 | **UN Meetings Coverage** `press.un.org` | B | Press releases per meeting | Contains explanations-of-vote. This is where you get the **stated justification**, which is the raw material for language-alignment analysis (§5). |
@@ -100,6 +102,44 @@ Counting these per-speaker per-year turns rhetoric into a series.
 | **China Customs (GACC)** monthly | A | HTML/XLS |
 | **OpenSanctions** | A | Bulk JSON/FtM |
 | **Equasis / vessel AIS** for shadow-fleet and Northern Sea Route transits | B | Mixed |
+
+
+---
+
+## Traps in the official UN voting exports
+
+Found by profiling the committed datasets; each one silently produces a wrong
+answer rather than an error. All are encoded in `src/rcwatch/unsc.py` and
+`src/rcwatch/ga.py` and covered by tests.
+
+1. **Both exports contain adopted resolutions only.** Failed and vetoed drafts
+   are absent — verified by probing for the Sept 2022 Ukraine, March 2024 Gaza
+   and Oct 2011 Syria double vetoes, none of which appear. Anyone who reaches for
+   a file called `sc_voting.csv` to count vetoes will get zero and may not notice.
+   The GA codebook states this; the SC export does not.
+
+2. **GA `session` is not an integer.** `4sp` is the 4th special session and
+   `11emsp` the 11th emergency special session (74 of 5,694 resolutions). This is
+   undocumented in the codebook, which describes the field only as "session
+   number". It matters disproportionately: **ES-11 is the Ukraine session and
+   ES-10 is the Palestine session** — the most politically informative votes in
+   the file. `int(session)` raises; filtering to `.isdigit()` drops them silently.
+
+3. **`ms_code='CHN'` changes occupant on 25 October 1971**, from the Republic of
+   China to the PRC. A continuous 1946–2026 "China" series compares Moscow
+   against Taipei for its first 25 years.
+
+4. **`SUN` (USSR) and `RUS` are distinct codes** with no overlapping ballots.
+   Splicing them is defensible but must be a stated choice, not an accident.
+
+5. **`permanent_member` is wrong in the SC export** — Somalia is flagged `True`
+   on five 2025 ballots. Use a hard-coded P5 list.
+
+6. **`modality='Without Vote'`** rows record no positions and must be excluded
+   from any agreement denominator (76 ballots in the SC export).
+
+7. **`ms_name` is the state's name at the time of the vote** and changes across
+   the series. Join on `ms_code`.
 
 ---
 

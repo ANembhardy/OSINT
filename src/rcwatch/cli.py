@@ -2,6 +2,8 @@
 
     python -m rcwatch contacts   [--level leader] [--csv data/seed/meetings.csv]
     python -m rcwatch agreement  --votes votes.csv [--contested] [--baselines]
+    python -m rcwatch unsc       [--data ...] [--audit]
+    python -m rcwatch ga         [--data ...] [--since 1992-01-01]
     python -m rcwatch gdelt-sql  [--start 2015-01-01]
     python -m rcwatch undl       --query '...' [--limit 25] [--out votes.csv]
     python -m rcwatch audit
@@ -78,6 +80,147 @@ def cmd_undl(args) -> int:
     return 0
 
 
+SC_DEFAULT = "data/raw/2026_02_06_sc_voting.csv.gz"
+GA_DEFAULT = "data/raw/2026_02_06_ga_voting.csv.gz"
+
+
+def cmd_unsc(args) -> int:
+    """Russia-China behaviour on adopted Security Council resolutions."""
+    from . import unsc
+
+    if args.audit:
+        _print(unsc.audit(args.data))
+        return 0
+
+    ballots = unsc.load(args.data)
+    scoped = [
+        b for b in ballots
+        if b.china_seat == "PRC" and b.date >= unsc.USSR_SUCCESSION
+    ]
+    con = unsc.contested(scoped)
+
+    out = {
+        "source": args.data,
+        "scope_warning": unsc.audit(args.data)["scope_warning"],
+        "adopted_ballots": len(ballots),
+        "in_scope_prc_post_soviet": len(scoped),
+        "contested_ballots": len(con),
+        "contested_share": round(len(con) / len(scoped), 4) if scoped else None,
+    }
+
+    for label, subset in (("all_adopted", scoped), ("contested_only", con)):
+        res = agreement.score(unsc.to_vote_table(subset), args.a, args.b)
+        out[label] = res.summary()
+
+    tbl = unsc.to_vote_table(con)
+    out["baselines_contested"] = [
+        agreement.score(tbl, x, y, keep_divergences=False).summary()
+        for x, y in ((args.a, args.b), ("USA", "GBR"), ("USA", "FRA"),
+                     ("GBR", "FRA"), ("USA", args.a), ("USA", args.b))
+    ]
+
+    # direction of the split, and abstention propensity
+    split = {"a_yes_b_abstain": 0, "b_yes_a_abstain": 0, "other": 0}
+    for b in con:
+        va, vb = b.votes.get(args.a), b.votes.get(args.b)
+        if va is None or vb is None or va == vb:
+            continue
+        if va == agreement.YES and vb == agreement.ABSTAIN:
+            split["a_yes_b_abstain"] += 1
+        elif vb == agreement.YES and va == agreement.ABSTAIN:
+            split["b_yes_a_abstain"] += 1
+        else:
+            split["other"] += 1
+    out["split_direction"] = split
+    out["abstention_rate_contested"] = {
+        c: round(sum(1 for b in con if b.votes.get(c) == agreement.ABSTAIN) / len(con), 4)
+        for c in (args.a, args.b, "USA", "GBR", "FRA")
+    } if con else {}
+
+    periods = {}
+    for b in con:
+        periods.setdefault(f"{(b.year // 5) * 5}-{(b.year // 5) * 5 + 4}", []).append(b)
+    out["by_period_contested"] = {
+        k: agreement.score(unsc.to_vote_table(v), args.a, args.b,
+                           keep_divergences=False).summary()
+        for k, v in sorted(periods.items())
+    }
+
+    _print(out)
+    return 0
+
+
+GA_BASELINES = (("RUS", "IND"), ("CHN", "IND"), ("CHN", "BRA"), ("RUS", "IRN"),
+                ("CHN", "PAK"), ("CHN", "ZAF"), ("USA", "GBR"), ("FRA", "DEU"))
+
+#: A rough Global South caucus, for the bloc-effect control (measure M2).
+G77_SAMPLE = ("DZA", "EGY", "IND", "IDN", "IRN", "PAK", "NGA", "ZAF",
+              "BRA", "CUB", "VEN", "MYS", "THA", "LKA", "ZWE")
+
+
+def cmd_ga(args) -> int:
+    """Russia-China behaviour on General Assembly recorded votes."""
+    from . import ga
+
+    res = ga.load(args.data)
+    scoped = [r for r in res if r.china_seat == "PRC" and r.date >= args.since]
+    regular = ga.regular_sessions(scoped)
+
+    tbl = ga.to_vote_table(scoped)
+    con = agreement.contested(tbl, args.threshold)
+
+    out = {
+        "source": args.data,
+        "citation": ga.CITATION,
+        "resolutions_total": len(res),
+        "in_scope": len(scoped),
+        "contested_ballots": len(con),
+        "contested_share": round(len(con) / len(tbl), 4) if tbl else None,
+        "session_kinds": {
+            k: sum(1 for r in scoped if r.session_kind == k)
+            for k in ("regular", "special", "emergency_special")
+        },
+    }
+    for label, t in (("all_recorded", tbl), ("contested_only", con)):
+        out[label] = agreement.score(t, args.a, args.b, keep_divergences=False).summary()
+
+    out["baselines_contested"] = [
+        agreement.score(con, x, y, keep_divergences=False).summary()
+        for x, y in ((args.a, args.b), *GA_BASELINES)
+    ]
+    out["g77_mean_pairwise_contested"] = round(agreement.mean_pairwise(con, G77_SAMPLE), 4)
+
+    # Per-session trend on regular sessions only.
+    sess = ga.sessions(regular)
+    reg_tbl = ga.to_vote_table(regular)
+    reg_con = agreement.contested(reg_tbl, args.threshold)
+    raw_s = agreement.by_session(reg_tbl, sess, args.a, args.b)
+    con_s = agreement.by_session(reg_con, sess, args.a, args.b)
+    out["by_session_regular"] = {
+        s: {
+            "raw": raw_s[s].summary()["agreement"],
+            "raw_n": raw_s[s].comparable,
+            "contested": con_s[s].summary()["agreement"] if s in con_s else None,
+            "contested_n": con_s[s].comparable if s in con_s else 0,
+        }
+        for s in sorted(raw_s, key=ga.session_sort_key)
+        if raw_s[s].comparable >= args.min_n
+    }
+
+    # Emergency special sessions, broken out: ES-11 is Ukraine, ES-10 Palestine.
+    out["emergency_special"] = {}
+    for num in sorted({r.session_number for r in scoped
+                       if r.session_kind == "emergency_special"}):
+        sub = [r for r in scoped
+               if r.session_kind == "emergency_special" and r.session_number == num]
+        r = agreement.score(ga.to_vote_table(sub), args.a, args.b, keep_divergences=False)
+        if r.comparable:
+            out["emergency_special"][f"ES-{num}"] = r.summary()
+
+    _print(out)
+    return 0
+
+
 def cmd_audit(args) -> int:
     """Provenance audit: what in the seed data is still unverified?"""
     report = {}
@@ -129,6 +272,22 @@ def main(argv: list[str] | None = None) -> int:
     u.add_argument("--limit", type=int, default=25)
     u.add_argument("--out")
     u.set_defaults(func=cmd_undl)
+
+    n = sub.add_parser("unsc", help="Russia-China behaviour on adopted Security Council resolutions")
+    n.add_argument("--data", default=SC_DEFAULT)
+    n.add_argument("--a", default="RUS")
+    n.add_argument("--b", default="CHN")
+    n.add_argument("--audit", action="store_true", help="print the data-quality report only")
+    n.set_defaults(func=cmd_unsc)
+
+    g2 = sub.add_parser("ga", help="Russia-China behaviour on General Assembly recorded votes")
+    g2.add_argument("--data", default=GA_DEFAULT)
+    g2.add_argument("--a", default="RUS")
+    g2.add_argument("--b", default="CHN")
+    g2.add_argument("--since", default="1992-01-01", help="ISO date; default skips the Soviet series")
+    g2.add_argument("--threshold", type=float, default=0.10)
+    g2.add_argument("--min-n", type=int, default=10, help="drop sessions with fewer comparable votes")
+    g2.set_defaults(func=cmd_ga)
 
     d = sub.add_parser("audit", help="provenance audit of the seed data")
     d.set_defaults(func=cmd_audit)

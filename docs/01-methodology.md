@@ -53,7 +53,9 @@ Classify every non-identical vote:
 | `absence` | vote | absent | Usually procedural, low signal |
 
 A rise in `opposed` is a much stronger signal of divergence than a rise in
-`partial_split`. Reported alignment declines in this dyad have been driven partly
+`partial_split`. In the Security Council the distinction is absolute: across
+2,038 adopted resolutions since 1992, Russia and China have **never** voted on
+opposite sides — every divergence is a partial split. Reported alignment declines in this dyad have been driven partly
 by real opposed votes (death-penalty moratorium, humanitarian arms control such
 as cluster munitions and landmines) — issues where the divergence reflects
 domestic legal policy, not geopolitics. **Weight divergences by whether they

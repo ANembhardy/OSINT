@@ -27,11 +27,18 @@ tests/                        offline test suite
 No dependencies beyond Python 3.11 and `pytest` for the tests.
 
 ```bash
-make test        # offline suite
+make test        # offline suite (34 tests)
+make ga          # Russia-China General Assembly voting analysis
+make unsc        # Russia-China Security Council voting analysis
 make audit       # what in the seed data still lacks a primary record
 make contacts    # leader-level contact indicators
 make sql         # BigQuery SQL for the GDELT contact series
 ```
+
+Two official UN voting datasets ship with the repo under `data/raw/`:
+the Dag Hammarskjold Library General Assembly export (947k rows, 1946 to
+Dec 2025) and the UNDL Security Council export (41k rows, 1946 to Jan 2026).
+Both are UN copyright, non-commercial use with attribution.
 
 Live collection (needs unrestricted network):
 
@@ -68,9 +75,27 @@ Every claim produced here is tagged with its tier.
 - Fetches cache to `out/cache/` with a `.meta.json` sidecar recording URL and
   retrieval time.
 
+## What the data says
+
+Three results from the committed datasets, each reproducible and test-guarded:
+
+1. **The base rate inverts the headline.** On contested General Assembly votes
+   1992-2025, Russia-China agreement is 58.4% -- *below* the Global South mean
+   pairwise of 82.2%, and below China-India (78.2%) and China-Pakistan (83.3%).
+   Russia is the isolate; China votes like a mainstream Global South member.
+2. **The published "77% to 67% decline" is mostly a subsetting artefact.** It
+   reproduces on the raw series (77.9% to 66.7%, 2018-2024) and nearly vanishes
+   on contested votes (66.7% to 64.9%).
+3. **Alignment is issue-contingent, sharply.** Emergency special session ES-10
+   (Palestine): 92.3% agreement. ES-11 (Ukraine): 22.2%. China joined Russia in
+   voting no on exactly two of nine Ukraine texts -- the Human Rights Council
+   suspension and the reparations mechanism -- both precedent-setting rather than
+   condemnatory.
+
 ## Status
 
-First pass. The findings document is preliminary and says so: it was assembled
-under a sandbox that blocked direct access to the UN, Kremlin and PRC MFA
-domains, so tier-1 records are catalogued but not yet retrieved. Priorities for
-the next pass are listed at the end of `docs/03-findings-2026-09.md`.
+Section 1 of the findings is computed from primary data. Sections 2-4 (joint
+statements, diplomatic contact, shared positions) are still assembled from
+search retrieval, because the build sandbox blocked direct access to the UN,
+Kremlin and PRC MFA domains. Priorities for the next pass are listed at the end
+of `docs/03-findings-2026-09.md`.

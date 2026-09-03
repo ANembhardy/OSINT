@@ -3,4 +3,5 @@ __pycache__/
 .pytest_cache/
 out/cache/
 out/*.csv
+out/*.pkl
 .venv/
