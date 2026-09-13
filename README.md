@@ -16,6 +16,9 @@ docs/01-methodology.md        measures M1-M6, and what each can and cannot estab
 docs/02-source-inventory.md   every structured source: endpoint, format, tier, cadence
 docs/03-findings-2026-09.md   first-pass substantive findings
 docs/04-runbook.md            step-by-step collection
+docs/05-realism-lawfare-literature.md
+                              annotated literature map: modern realism +
+                              Russian lawfare (theory, four arenas, designs)
 data/seed/                    hand-coded tables (contacts, joint documents, UNSC actions)
 data/schema/                  JSON Schema for each table
 src/rcwatch/                  library + CLI (stdlib only, no dependencies)
