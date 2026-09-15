@@ -1,0 +1,179 @@
+# What the theory is actually for
+
+Plain-language companion to `docs/05` and `docs/06`. Read this one first. No
+citation apparatus — the point here is the mechanics, not the reading list.
+
+---
+
+## 1. Why "what is my theory?" has felt unanswerable
+
+Because the project needs **three** theoretical components doing three different
+jobs, and the question "what is my theory" assumes there is one. There isn't, and
+that is not a defect in the project. No single IR theory covers all three.
+
+| | The question it answers | What goes here | How big |
+|---|---|---|---|
+| **Slot 1** | Why does Russia want to contest an order it cannot overturn by force? | Realism / neoclassical realism | One section. Background. |
+| **Slot 2** | Why is *law* one of the tools it reaches for — how can legal argument be a resource of power at all? | IR–international law theory: Hurd, Koskenniemi, Simpson, Goddard | **Where the thesis actually lives.** |
+| **Slot 3** | Is Russia's use of that tool directed, routine, habitual, or inherited? | Four rival accounts (§4) | Your findings chapter. |
+
+Trying to make realism answer all three is what produces the stuck feeling. Realism
+answers slot 1 well, slot 2 thinly, and slot 3 not at all.
+
+## 2. What a theory does, in one sentence
+
+> **A theory converts something you cannot observe into something you can.**
+
+You cannot observe whether Russia "has a lawfare strategy." Strategy is a state of
+mind and an internal process; the archives are shut. What you *can* observe is legal
+acts: declarations filed, arguments made, objections raised, treaties exited,
+statutes passed.
+
+Theory is the bridge between the two. It says: *if X were true, the world would also
+look like this.* That is what turns a pile of observed acts into evidence about an
+unobservable. Without it you have a chronology. With it you have an argument.
+
+This is the whole answer to "what is the theory for my piece of work". It is not a
+hat you put on the thesis. It is the thing that makes your observations mean
+something.
+
+## 3. The distinction nobody explains
+
+There are two different things called "theory" in a thesis, and confusing them is
+the most common source of exactly the trouble you are having.
+
+- **Theory as a lens.** A set of concepts you look through. "I approach this from a
+  realist perspective." It cannot be wrong, because it is not a claim — it is a
+  choice about what to pay attention to.
+- **Theory as a hypothesis.** A claim that could turn out false. "If Russian lawfare
+  is centrally directed, we should see legal instruments in place before the disputes
+  they serve. Here is whether we do."
+
+Supervisors say "theoretical framework" and usually mean the first. Examiners attack
+you for not having the second. Both are legitimate; the failure is being vague about
+which one you are doing at any given moment.
+
+**Your thesis needs both, in different places.** Lens for slots 1 and 2. Hypotheses
+for slot 3. Saying so explicitly — "in this chapter theory is doing X, in that
+chapter it is doing Y" — is most of what a strong theory chapter consists of.
+
+## 4. Slot 3 concretely: four rival accounts
+
+These are the ones that can be wrong, so this is where theory earns its place. Each
+is an answer to "what kind of behaviour is this?", and each predicts something
+different.
+
+1. **Strategy** — centrally directed, doctrinally anchored. Someone decided this.
+2. **Organisational routine** — the MFA Legal Department produces legal arguments
+   because that is its standing function. Patterned, but nobody decided anything.
+3. **Practice** — an ingrained repertoire. Officials reach for certain legal moves
+   the way a competent professional reaches for familiar tools, without deliberating.
+4. **Inherited continuity** — the moves are transmitted from Soviet and imperial
+   practice. Deep, but not designed.
+
+Note that 2, 3 and 4 are all **"structured but not strategic"** — and they are
+distinguishable from each other. That is the interesting finding space, and it only
+opens up if you stop treating the question as strategy-versus-opportunism.
+
+"Opportunism" is then the residual: what is left when none of the four patterns
+holds.
+
+## 5. Worked example — one fact, four theories
+
+The point of this section is to make §2 concrete. The same observable fact, and what
+each account says you should *additionally* find if it is the right one.
+
+**The fact.** Russia ratified UNCLOS in 1997 and filed a declaration under Article
+298 excluding certain categories of dispute — military activities among them — from
+compulsory dispute settlement. In 2018 it seized three Ukrainian naval vessels at the
+Kerch Strait. When Ukraine litigated, Russia argued the military-activities exclusion
+applied. That exclusion was filed twenty-one years before the incident it covered.
+
+On its own this fact proves nothing. Here is theory doing work:
+
+| Account | What else you should find | Where to look |
+|---|---|---|
+| **Strategy** | The 1997 exclusions map onto Russia's foreseeable disputes; similar pre-positioning across other treaties; legal advisers involved in operational planning | The declaration's categories; comparable reservations elsewhere; delegation composition |
+| **Organisational routine** | The declaration resembles other states' Article 298 declarations; timing tracks the ratification schedule, not geopolitics; no anticipation of anything specific | Other states' declarations (China, France); the ratification record |
+| **Practice** | The *form* recurs everywhere while content varies — jurisdictional objections at similar intensity across UNCLOS, ECtHR, ICJ, investment arbitration; practitioners cannot state the rule they follow | Cross-forum comparison of procedural conduct |
+| **Inherited continuity** | A direct genealogy from Soviet reservation practice, in the same categories | Soviet reservations to compromissory clauses |
+
+That last row is checkable right now, and it probably comes out positive. The USSR
+systematically reserved against compromissory clauses on ratification, declaring
+itself not bound by them — and on 10 February 1989 the Presidium of the Supreme
+Soviet withdrew those reservations for six human rights conventions, accepting ICJ
+jurisdiction under them. So the sequence is: Soviet exclusion of compulsory
+jurisdiction as standing practice → a narrow late-Soviet opening → post-Soviet Russia
+excluding it again under Article 298.
+
+If that genealogy holds, then Russia's jurisdictional conduct is **structured, deep,
+and not a strategy** — it is an inherited administrative reflex. That is a real
+finding, it is not something you could have reached by describing cases, and it came
+from a theory telling you where to look. That is what theory is for.
+
+## 6. The test to apply to any theory you consider
+
+> **If I delete this theory from the thesis, what breaks?**
+
+If the answer is "nothing — the empirical chapters read the same," it is decoration
+and you should cut it. Applied to your candidates:
+
+- **Delete realism** → you lose the answer to "why is Russia doing any of this", and
+  the thesis becomes legal description with no account of motive. Keep it, small.
+- **Delete the IR–IL theory (slot 2)** → your concept of lawfare loses its warrant.
+  If legal argument is not a resource of power, there is nothing to study. **This is
+  load-bearing.**
+- **Delete the slot 3 rivals** → your final chapter becomes an assertion about
+  Russian intentions with no way to adjudicate it. **Load-bearing.**
+- **Delete Mearsheimer specifically** → nothing breaks. Cut.
+
+## 7. Chapter 1 is not a theory chapter
+
+Worth saying plainly, because it may be part of the confusion. "Lawfare is a real
+academic term and it can discriminate" is **concept formation**, which is a distinct
+methodological literature, not IR theory:
+
+- Sartori, "Concept Misformation in Comparative Politics", *American Political
+  Science Review* (1970)
+- Collier & Mahon, "Conceptual 'Stretching' Revisited: Adapting Categories in
+  Comparative Analysis", *APSR* (1993) — on family-resemblance and radial categories,
+  directly relevant if lawfare turns out not to have one single defining attribute
+
+Don't try to theorise that chapter. **Operationalise it**: state the conditions,
+then show the concept sorting real cases in and out. Theory enters only at one point
+— your definition has to rest on some claim about why legal argument is politically
+consequential, and that claim comes from slot 2.
+
+## 8. The paragraph to say out loud
+
+If someone asks what your theoretical framework is:
+
+> "Realism tells me why Russia wants to contest an international order it cannot
+> overturn by force. It doesn't tell me why *law* is one of the instruments it reaches
+> for — for that I use the IR–international law literature that treats legal argument
+> as a resource of legitimacy operating partly independently of material power.
+> Together those give me a concept of lawfare with a reason to exist. My empirical
+> question is then whether Russia's lawfare is centrally directed, bureaucratically
+> routine, an ingrained practice, or an inherited repertoire — four accounts that
+> predict different observable patterns, which is what makes my case comparisons a
+> test rather than a description."
+
+Three theoretical moves, three jobs, and an empirical question that could come out
+more than one way. That is a framework. It was never going to be one theory.
+
+## 9. If you only do one thing next
+
+Take three or four cases you already know well and fill in the §5 table for each:
+what you observe, and what each of the four accounts predicts you would *also* see.
+Where the predictions differ, you have a research task. Where they don't, that case
+cannot discriminate and is only illustration.
+
+That exercise is the theory chapter. Writing it afterwards is transcription.
+
+---
+
+*Sources for the two factual claims above: the Soviet compromissory-clause
+reservations and their 1989 withdrawal — "The Acceptance by the Soviet Union of the
+Compulsory Jurisdiction of the ICJ for Six Human Rights Conventions", European
+Journal of International Law 2:1 (1991), 110, https://www.ejil.org/pdfs/2/1/2028.pdf
+; concept-formation methodology — https://www.cambridge.org/core/journals/american-political-science-review/article/abs/conceptual-stretching-revisited-adapting-categories-in-comparative-analysis/52A5DA1F2B8A9516A45C04F5B165E1C5*

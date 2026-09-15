@@ -21,6 +21,9 @@ docs/05-realism-lawfare-literature.md
                               Russian lawfare (theory, four arenas, designs)
 docs/06-thesis-design.md     which theories carry the lawfare thesis, and
                               where the design is exposed
+docs/07-what-the-theory-does.md
+                              plain-language: what theory is for in the
+                              lawfare thesis, and the three jobs it does
 data/seed/                    hand-coded tables (contacts, joint documents, UNSC actions)
 data/schema/                  JSON Schema for each table
 src/rcwatch/                  library + CLI (stdlib only, no dependencies)
