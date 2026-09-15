@@ -222,6 +222,143 @@ classical realist tradition, which — unlike structural realism — treated int
 law as a central object of analysis," which is a stronger and more distinctive claim
 than positioning yourself with neoclassical realism.
 
+## 5b. Staying in political science
+
+The constraint is real, but it is narrower than it feels. **It is about where the
+explanandum sits, not about which sources you cite.** You can cite Koskenniemi, AJIL
+and EJIL freely. What makes a thesis political science rather than law is:
+
+- the dependent variable is **state behaviour**, not the content or validity of legal
+  rules;
+- the claims are **explanatory about politics**, not doctrinal about what the law
+  requires;
+- the method is social-scientific — case comparison, process tracing, content
+  analysis — not doctrinal interpretation.
+
+### The one diagnostic test
+
+> **Does your thesis ever have to assert that Russia was legally wrong?**
+
+If yes, you have drifted into law. A political science thesis says: *Russia advanced
+argument X in forum Y at time Z; here is what that tells us about how Russia behaves.*
+The legal validity of the argument is not your business — except as a **datum**, and
+an informative one: a weak argument advanced anyway, at cost, tells you something
+about behaviour, which is your actual subject.
+
+This should be a relief. **You never have to adjudicate a legal question.** That is
+the boundary, and it is easy to hold.
+
+### What this means for §5a
+
+Keep Carr and Morgenthau — they are IR canon and no political scientist will blink.
+Keep Schwarzenberger if he earns his place. But **demote the hegemonic-international-
+law debate (Vagts, Alvarez, Krisch) from framework to warrant**: one paragraph in
+chapter 1 establishing that law-as-instrument-of-power is a serious position in legal
+scholarship too, then move on.
+
+Because there is a well-developed **political science** literature doing exactly the
+job slot 2 needs, written by people in politics departments.
+
+### The political science literature for slot 2
+
+**Legitimacy as a resource.** **Ian Hurd — Political Science, Northwestern —
+*After Anarchy: Legitimacy and Power in the United Nations Security Council*
+(Princeton UP, 2007).** Won the ISA's Chadwick Alger Award. Its central finding is
+tailor-made for your thesis: **when states use the Council's legitimacy for their own
+purposes, they reaffirm its stature and end up contributing to its authority.** That
+is a causal mechanism explaining why instrumental use of an institution is not simply
+corrosive — it is self-reinforcing. Hurd also deliberately joins realist and
+constructivist arguments, which gives you cover on both flanks. See also Bukovansky,
+*Legitimacy and Power Politics* (Princeton UP, 2002).
+
+**Rhetoric as coercion — the mechanism, and the methodological escape hatch.**
+**Krebs & Jackson, "Twisting Tongues and Twisting Arms: The Power of Political
+Rhetoric", *European Journal of International Relations* 13:1 (2007).** Their move is
+to **abandon persuasion** — theoretically and methodologically unprovable — and model
+rhetoric as *coercion*: manoeuvring an opponent into a position where they cannot
+publicly sustain their objection.
+
+**This may be the single most useful import available to you.** It gives a political
+science answer to "what does legal argument actually do?" that requires no legal
+theory *and no claim about sincerity*. You do not need to know what Russian officials
+believed. That dissolves the hardest evidentiary problem in the whole project.
+
+With it: **Schimmelfennig, "The Community Trap", *International Organization* 55:1
+(2001)** on rhetorical action and entrapment; and **Scherzinger, "'Acting under
+Chapter 7': rhetorical entrapment, rhetorical hollowing, and the authorization of
+force in the UN Security Council, 1995–2017", *International Relations* (2023)** — a
+political science article applying entrapment to Security Council legal authorisation
+practice. **Read that one as a template for your institutional chapters.**
+
+**Regime complexity and forum shopping.** **Karen Alter — Political Science,
+Northwestern — & Meunier, "The Politics of International Regime Complexity",
+*Perspectives on Politics* 7:1 (2009)**; Alter & Raustiala, "The Rise of International
+Regime Complexity", *Annual Review of Law and Social Science* (2018); Alter, *The New
+Terrain of International Law* (Princeton UP, 2014).
+
+This literature names the cross-institutional strategies directly: **forum shopping,
+regime shifting, and strategic inconsistency.** Your four arenas *are* a regime
+complex. "Russia selects venues strategically" is a forum-shopping claim with a mature
+political science vocabulary already attached, and "strategic inconsistency" —
+deliberately generating conflicting obligations — is a lawfare tactic that already has
+a political science name. **This reframes your entire empirical design in
+discipline-native terms.**
+
+**Institutional design — the political science home for pre-positioning.**
+**Koremenos, Lipson & Snidal, "The Rational Design of International Institutions",
+*International Organization* 55:4 (2001)**, and the CUP volume. Five design
+dimensions — membership, scope, centralization, control, and **flexibility**.
+
+Reservations, opt-outs and escape clauses are *designed flexibility* in this
+literature. So your Article 298 case stops being "Russia pre-positioned legally" and
+becomes "**Russia exploited designed flexibility**" — the same observation in
+political science vocabulary, with a built-in comparative baseline: which states use
+which flexibility provisions, when, and how much.
+
+**Compliance and selection — which solves the methods problem in `docs/06` §2.**
+**Downs, Rocke & Barsoom, "Is the Good News about Compliance Good News about
+Cooperation?", *International Organization* (1996)**, and **von Stein, "Do Treaties
+Constrain or Screen? Selection Bias and Treaty Compliance", *American Political
+Science Review* 99:4 (2005), 611–622.**
+
+This is political science's own literature on exactly the selection problem flagged in
+`docs/06`: do states comply because the commitment binds them, or because they signed
+commitments matching what they would have done anyway? Von Stein finds the
+unobservable conditions leading states to commit substantially shape compliance.
+**Citing this is the discipline-respectable way to handle your negative-cases issue**,
+and it shows you know your methods literature.
+
+**And keep Krasner**, *Sovereignty: Organized Hypocrisy* (Princeton UP, 1999) —
+political science, and still the most citable statement that rules are systematically
+violated *and* systematically invoked. Ikenberry, *After Victory* / *Liberal
+Leviathan*, and Gruber, *Ruling the World* (Princeton UP, 2000) on institutions as
+power bargains, if you need the order-level frame.
+
+### The framework, restated in political science
+
+> Russia is a revisionist power in a dense regime complex. Legal argument is a cheap
+> instrument because legitimacy is a resource operating partly independently of
+> material power (Hurd). It works not by persuading anyone but by rhetorically
+> constraining opponents (Krebs & Jackson). The regime complex supplies multiple
+> venues and the option of strategic inconsistency (Alter). Whether Russia's
+> exploitation of this is centrally directed, bureaucratically routine, an ingrained
+> practice, or an inherited repertoire is my empirical question.
+
+No doctrinal claim anywhere in it, every citation from a politics department, and more
+specific than "realism". That is the framework.
+
+### One honest cost
+
+The political science literature on international law is **weak on the content of
+legal argument**. Krebs & Jackson do not care what an argument says, only what
+position it forces an opponent into. If part of your contribution depends on the
+specific texture of Russian legal argumentation — which is what Mälksoo's material
+gives you — you will need the law literature for that.
+
+That is fine, but **name it yourself**: the thesis is IR, with an empirical base in
+legal materials. Hurd, Alter and Simmons all work that way. Declaring it in the
+introduction is much better than having an examiner declare it for you.
+
 ## 6. The test to apply to any theory you consider
 
 > **If I delete this theory from the thesis, what breaks?**

@@ -209,6 +209,46 @@ A named exchange on law as an instrument of hegemonic power, more precise than
   rather than abandoning it for political tools.
 - Koskenniemi 2004 (§1.6) belongs to this conversation.
 
+### 1.5d The political science literature on law as an instrument of power
+
+For a politics department this cluster replaces §1.5c as the framework; the law-journal
+debate stays as a one-paragraph warrant. Every author below sits in a politics
+department. Argued in `docs/07-what-the-theory-does.md` §5b.
+
+- **Hurd, *After Anarchy: Legitimacy and Power in the United Nations Security Council*
+  (Princeton UP, 2007). `[v]`** Legitimacy as a resource; states using the Council's
+  legitimacy instrumentally end up reinforcing its authority. ISA Chadwick Alger
+  Award. Joins realist and constructivist arguments deliberately. With Bukovansky,
+  *Legitimacy and Power Politics* (Princeton UP, 2002). `[u]`
+- **Krebs & Jackson, "Twisting Tongues and Twisting Arms: The Power of Political
+  Rhetoric", *European Journal of International Relations* 13:1 (2007). `[v]`**
+  Abandons persuasion as unprovable and models rhetoric as coercion — manoeuvring an
+  opponent into a position they cannot publicly sustain. **Requires no claim about
+  sincerity, which removes the project's hardest evidentiary problem.**
+- **Schimmelfennig, "The Community Trap", *International Organization* 55:1 (2001)
+  `[v]`**; **Scherzinger, "'Acting under Chapter 7': rhetorical entrapment, rhetorical
+  hollowing, and the authorization of force in the UN Security Council, 1995–2017",
+  *International Relations* (2023). `[v]`** The latter is a working template for an
+  institutional-arena chapter.
+- **Alter & Meunier, "The Politics of International Regime Complexity", *Perspectives
+  on Politics* 7:1 (2009) `[v]`**; Alter & Raustiala, "The Rise of International Regime
+  Complexity", *Annual Review of Law and Social Science* (2018) `[v]`; Alter, *The New
+  Terrain of International Law* (Princeton UP, 2014) `[u]`.
+  Names the cross-institutional strategies — **forum shopping, regime shifting,
+  strategic inconsistency**. The four arenas of this thesis are a regime complex.
+- **Koremenos, Lipson & Snidal, "The Rational Design of International Institutions",
+  *International Organization* 55:4 (2001). `[v]`** Flexibility as a design dimension:
+  reservations and opt-outs are designed features, which converts "pre-positioning"
+  into "exploiting designed flexibility" with a comparative baseline.
+- **Downs, Rocke & Barsoom, "Is the Good News about Compliance Good News about
+  Cooperation?", *International Organization* (1996) `[u]`**; **von Stein, "Do Treaties
+  Constrain or Screen? Selection Bias and Treaty Compliance", *APSR* 99:4 (2005),
+  611–622. `[v]`** Political science's own literature on the selection problem in
+  `docs/06` §2.
+- **Krasner, *Sovereignty: Organized Hypocrisy* (Princeton UP, 1999) `[u]`**; Ikenberry,
+  *After Victory* / *Liberal Leviathan* `[u]`; Gruber, *Ruling the World* (Princeton UP,
+  2000) `[u]`.
+
 ### 1.6 Realism's own theory of international law
 
 A realist lawfare thesis needs this genealogy, because the claim "law is an
@@ -743,6 +783,7 @@ Pages used to confirm `[v]` citations:
 - Koskenniemi 2001 ch. 6 — https://www.cambridge.org/core/books/abs/gentle-civilizer-of-nations/out-of-europe-carl-schmitt-hans-morgenthau-and-the-turn-to-international-relations/A1FCD2F7A0B4C1AB655C59B8DAD162E8
 - Hegemonic international law debate — https://academic.oup.com/ejil/article/16/3/369/431325 ; https://www.ejil.org/pdfs/16/3/301.pdf ; https://www.researchgate.net/publication/274437902_Hegemonic_International_Law_Revisited
 - Carr, harmony of interests — https://archive.org/details/twentyyearscrisi0000carr_c8m1
+- PS literature on law as power — https://press.princeton.edu/books/paperback/9780691138343/after-anarchy ; https://journals.sagepub.com/doi/10.1177/1354066107074284 ; https://journals.sagepub.com/doi/10.1177/00471178221082870 ; https://faculty.wcas.northwestern.edu/kal438/KarenJAlter2/International_Regime_Complexity_files/AlterMeunierComplexityPOP2009.pdf ; https://www.cambridge.org/core/books/rational-design-of-international-institutions/F22FCCF591606E0DCA16C1BD7BB15187 ; https://www.cambridge.org/core/journals/american-political-science-review/article/abs/do-treaties-constrain-or-screen-selection-bias-and-treaty-compliance/99619F321DE63766D626E19155D69C35
 - Legro & Moravcsik 1999 — https://direct.mit.edu/isec/article/24/2/5/11642/Is-Anybody-Still-a-Realist
 - Johnston 1995 — https://www.fb03.uni-frankfurt.de/45431264/Johnston-1995-Thinking-aboutStrategic-Culture.pdf ; https://press.princeton.edu/books/paperback/9780691002392/cultural-realism
 - Practice theory — https://www.cambridge.org/core/journals/international-organization/article/abs/logic-of-practicality-a-theory-of-practice-of-security-communities/63A65E80B53BEC54E705AAE179CCD723 ; https://journals.sagepub.com/doi/abs/10.1177/0010836715574913
