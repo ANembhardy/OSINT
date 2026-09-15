@@ -27,6 +27,7 @@ docs/07-what-the-theory-does.md
 docs/08-mechanisms-and-theory.md
                               maps the draft article's two mechanisms onto
                               political science theory
+docs/09-phd-workplan.md       four-year plan and schedule, Feb 2026 start
 data/seed/                    hand-coded tables (contacts, joint documents, UNSC actions)
 data/schema/                  JSON Schema for each table
 src/rcwatch/                  library + CLI (stdlib only, no dependencies)
