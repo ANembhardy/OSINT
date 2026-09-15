@@ -111,6 +111,117 @@ and not a strategy** — it is an inherited administrative reflex. That is a rea
 finding, it is not something you could have reached by describing cases, and it came
 from a theory telling you where to look. That is what theory is for.
 
+## 5a. Correction: realism on law as an instrument of power
+
+The three-slot split in §1 drew the line in the wrong place. I put it between realism
+and non-realism. **The real line runs inside realism**, and getting this right
+simplifies the whole framework.
+
+- **Structural realism / neorealism** has almost nothing on law. Law is epiphenomenal,
+  institutions "largely a reflection of the distribution of power". This is where the
+  folk belief "realists don't do law" comes from.
+- **Classical realism** has a great deal — because several of its founders were
+  *international lawyers by training*, and wrote about law as their primary subject.
+
+So slot 2 is not a departure from realism. **It is a return to classical realism.**
+
+### The lawyers who became realists
+
+- **Georg Schwarzenberger**, *Power Politics* (1941, rev. 1951). Called international
+  law "power politics in disguise". A Weimar-trained jurist whose work, unlike other
+  classical realists', focuses squarely on the nature of international law and its
+  relation to power. **The most explicitly realist international lawyer there is, and
+  the most underused.** Recovered in Carmen Chas, "The reality and power of
+  international law: Georg Schwarzenberger's forgotten theory of International
+  Relations", *Cooperation and Conflict* (2024) — which argues directly against the
+  idea that realism cannot account for international law. Start here.
+- **Hans Morgenthau** — doctoral work on the international judicial function;
+  "Positivism, Functionalism, and International Law", *AJIL* 34 (1940); substantial
+  chapters on international law in *Politics Among Nations*. The monograph is Oliver
+  Jütersonke, *Morgenthau, Law and Realism* (CUP, 2010), reviewed in *The Review of
+  Politics* under the title "Morgenthau, the Realist Jurist". See also William
+  Scheuerman, *Hans Morgenthau: Realism and Beyond* (Polity, 2009).
+- **John H. Herz** — also a lawyer, and the source of the "security dilemma". Casper
+  Sylvest, "Realism and international law: the challenge of John H. Herz",
+  *International Theory* 2:3 (2010), 410–445.
+- **E. H. Carr**, *The Twenty Years' Crisis* (1939), especially Part Two ch. 4, "The
+  Harmony of Interests". **Carr's argument is nearly identical to Koskenniemi's**: the
+  dominant power presents its own particular interest as the universal interest, and
+  law is the medium in which it does so. Carr's "have" and "have not" states — the
+  privileged unwilling to renegotiate any part of an established advantage — is also
+  the cleanest available frame for a revisionist-power thesis.
+- **Carl Schmitt**, *The Nomos of the Earth*, and the critique of the discriminatory
+  concept of war. Not a realist in the disciplinary sense, but the major thinker on
+  law as spatial-political order — and directly relevant to a Russia case, since
+  Schmittian themes (sovereignty, Großraum as sphere of influence, the critique of
+  liberal universalism) circulate in Russian legal-political discourse.
+
+### The bridge text
+
+**Koskenniemi, *The Gentle Civilizer of Nations* (CUP, 2001), chapter 6: "Out of
+Europe: Carl Schmitt, Hans Morgenthau, and the turn to 'international relations'".**
+
+Koskenniemi himself wrote the definitive account of how realism emerged out of a
+crisis in international legal thought — Morgenthau as a jurist whose turn to IR
+followed the collapse of legal formalism. **This one chapter dissolves the supposed
+gap between slot 1 and slot 2.** If you read one thing from this note, read this.
+
+### Koskenniemi is not a realist — and the difference matters
+
+He is a critical legal scholar: the structuralist / critical-legal-studies tradition,
+with "hegemony" coming from Gramsci and Laclau rather than from Morgenthau. Calling
+him a realist in a viva will get you corrected. But the deeper issue is substantive,
+because the two traditions reach similar conclusions from opposite premises:
+
+| | Why law tracks power | What kind of claim |
+|---|---|---|
+| **Carr, Schwarzenberger, Morgenthau** | States are self-interested; the system is anarchic; law reflects the interests of those who made it | Explanatory, about state motives |
+| **Koskenniemi** | Legal argument is structurally indeterminate, so any outcome can be justified in legal terms; "hegemony" is the contest over whose particular preference gets to appear universal | About the structure of legal argument, not about motives |
+
+**This is a live threat to your thesis, not a footnote.** If all legal argument is
+hegemonic contestation, then Russia's is not special, "lawfare" is ubiquitous, and
+your discrimination claim collapses. Koskenniemi gives you the most powerful account
+of why law is a medium of power *and* the strongest reason to doubt that lawfare
+picks out anything distinctive.
+
+So your definition has to sort **within** the space Koskenniemi describes. Not "is
+this hegemonic contestation?" — on his account everything is — but "which instances
+carry the additional features that make lawfare a distinct kind of conduct?" Handling
+this explicitly is one of the strongest things your first chapter can do.
+
+### The named debate you should build slot 2 on
+
+There is a decade-spanning exchange in the law journals on precisely "law as an
+instrument of hegemonic power". It is more precise than "realism" and it is where
+this argument actually happens:
+
+- **Vagts, "Hegemonic International Law", *AJIL* 95 (2001)**
+- **Alvarez, "Hegemonic International Law Revisited", *AJIL* 97 (2003)** — on the
+  limits encountered by actors trying to use international law for cynical purposes.
+  **That is your dependent variable, addressed directly.**
+- **Krisch, "International Law in Times of Hegemony: Unequal Power and the Shaping of
+  the International Legal Order", *EJIL* 16:3 (2005), 369–.** Argues that hegemony and
+  international law are not irreconcilable: hegemons do not abandon law for political
+  tools, they work through it.
+- **Koskenniemi, "International law and hegemony: a reconfiguration", *CRIA* 17:2
+  (2004)** sits inside this conversation.
+
+### What this changes
+
+- **Slots 1 and 2 merge.** Classical realism plus the hegemonic-international-law
+  debate is one coherent theoretical home, not two frameworks bolted together.
+- **Neoclassical realism becomes optional.** Keep it for the demand side if your
+  department wants a contemporary framework — but you no longer need it, and dropping
+  it removes the Legro & Moravcsik falsifiability exposure entirely. Classical realism
+  does not make the positivist promises NCR is attacked for failing to keep.
+- **Slot 3 is unchanged.** The four rival accounts still do the discriminating work,
+  and that is still where the thesis is tested.
+
+One consequence worth noticing: the paragraph in §8 now reads better as "I work in the
+classical realist tradition, which — unlike structural realism — treated international
+law as a central object of analysis," which is a stronger and more distinctive claim
+than positioning yourself with neoclassical realism.
+
 ## 6. The test to apply to any theory you consider
 
 > **If I delete this theory from the thesis, what breaks?**

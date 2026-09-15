@@ -161,6 +161,54 @@ as their dependent variable. Argued through in `docs/06-thesis-design.md` §5.
   strategy/opportunism binary instead of picking a side**, and the most likely correct
   answer for the Russian case.
 
+### 1.5b Classical realism on international law — the lawyers
+
+The founders of classical realism include several trained international lawyers who
+wrote about law as their primary subject. This is the tradition that answers "are
+there realist authors who treat law as an instrument of power", and it is distinct
+from structural realism, which has nothing to offer here. Argued in
+`docs/07-what-the-theory-does.md` §5a.
+
+- **Schwarzenberger, *Power Politics* (1941; rev. 1951). `[u]`** International law as
+  "power politics in disguise", from a Weimar-trained jurist whose focus, unlike other
+  classical realists', is the nature of international law itself. Recovered in
+  **Chas, "The reality and power of international law: Georg Schwarzenberger's
+  forgotten theory of International Relations", *Cooperation and Conflict* (2024) `[v]`**,
+  which argues against the view that realism cannot account for international law.
+- **Jütersonke, *Morgenthau, Law and Realism* (CUP, 2010) `[v]`**; Scheuerman, *Hans
+  Morgenthau: Realism and Beyond* (Polity, 2009) `[v]`. Morgenthau's legal training and
+  writings as the origin of his political thought.
+- **Sylvest, "Realism and international law: the challenge of John H. Herz",
+  *International Theory* 2:3 (2010), 410–445. `[v]`**
+- **Carr, *The Twenty Years' Crisis* (1939), Part Two ch. 4 "The Harmony of
+  Interests". `[v]`** The dominant power's particular interest presented as the
+  universal interest, with law as its medium — Koskenniemi's hegemony claim in
+  classical-realist form. Also the "have"/"have not" states distinction.
+- **Schmitt, *The Nomos of the Earth*. `[u]`** Law as spatial-political order; the
+  critique of the discriminatory concept of war. Relevant to Russia because
+  Schmittian themes circulate in Russian legal-political discourse.
+- **The bridge: Koskenniemi, *The Gentle Civilizer of Nations* (CUP, 2001), ch. 6,
+  "Out of Europe: Carl Schmitt, Hans Morgenthau, and the turn to 'international
+  relations'". `[v]`** Koskenniemi's own account of realism emerging from a crisis in
+  international legal thought. **Note that Koskenniemi is a critical legal scholar,
+  not a realist** — his "hegemony" is Gramscian, and his indeterminacy thesis
+  threatens the claim that lawfare discriminates at all (see `docs/07` §5a).
+
+### 1.5c The hegemonic-international-law debate
+
+A named exchange on law as an instrument of hegemonic power, more precise than
+"realism" and the natural home for the thesis's second theoretical move.
+
+- **Vagts, "Hegemonic International Law", *AJIL* 95 (2001). `[v]`**
+- **Alvarez, "Hegemonic International Law Revisited", *AJIL* 97 (2003). `[v]`**
+  On the limits encountered by actors trying to use international law for cynical
+  purposes — the dependent variable of this thesis, addressed head on.
+- **Krisch, "International Law in Times of Hegemony: Unequal Power and the Shaping of
+  the International Legal Order", *EJIL* 16:3 (2005), 369–. `[v]`**
+  Hegemony and international law are not irreconcilable: hegemons work through law
+  rather than abandoning it for political tools.
+- Koskenniemi 2004 (§1.6) belongs to this conversation.
+
 ### 1.6 Realism's own theory of international law
 
 A realist lawfare thesis needs this genealogy, because the claim "law is an
@@ -691,6 +739,10 @@ Pages used to confirm `[v]` citations:
 - Crimea arbitration — https://journals.uni-goettingen.de/gojil/article/view/2323 ; https://kluwerlawonline.com/journalarticle/Journal+of+International+Arbitration/38.5/JOIA2021031 ; https://legalblogs.wolterskluwer.com/arbitration-blog/crimea-as-russian-territory-for-the-purposes-of-the-russia-ukraine-bit-consent-v-international-law/
 - Lugovoy law — https://tlblog.org/russias-lugovoy-law-and-the-battle-for-jurisdiction/ ; https://cisarbitration.com/2024/09/10/exclusive-jurisdiction-of-russian-courts-the-impact-of-sanctions-and-the-lugovoy-law/ ; https://legalblogs.wolterskluwer.com/arbitration-blog/russian-courts-claim-exclusive-jurisdiction-over-disputes-between-russian-domiciled-companies-another-blow-to-international-arbitration/
 - Article 234 / NSR — https://www.tandfonline.com/doi/full/10.1080/00908320.2020.1835026 ; https://www.tandfonline.com/doi/full/10.1080/2154896X.2020.1818487 ; https://www.cambridge.org/core/journals/leiden-journal-of-international-law/article/polar-silk-road-and-the-future-governance-of-the-northern-sea-route/DDDD1490B22BEB2493BF7D6BDE54152B ; https://polities.mgimo.ru/jour/article/view/64
+- Classical realism on law — https://journals.sagepub.com/doi/10.1177/00108367241244971 ; https://cambridge.org/us/academic/subjects/politics-international-relations/international-relations-and-international-organisations/morgenthau-law-and-realism ; https://www.cambridge.org/core/journals/international-theory/article/abs/realism-and-international-law-the-challenge-of-john-h-herz/49C9560379A9AA6FB3D243D37AD2AEF9
+- Koskenniemi 2001 ch. 6 — https://www.cambridge.org/core/books/abs/gentle-civilizer-of-nations/out-of-europe-carl-schmitt-hans-morgenthau-and-the-turn-to-international-relations/A1FCD2F7A0B4C1AB655C59B8DAD162E8
+- Hegemonic international law debate — https://academic.oup.com/ejil/article/16/3/369/431325 ; https://www.ejil.org/pdfs/16/3/301.pdf ; https://www.researchgate.net/publication/274437902_Hegemonic_International_Law_Revisited
+- Carr, harmony of interests — https://archive.org/details/twentyyearscrisi0000carr_c8m1
 - Legro & Moravcsik 1999 — https://direct.mit.edu/isec/article/24/2/5/11642/Is-Anybody-Still-a-Realist
 - Johnston 1995 — https://www.fb03.uni-frankfurt.de/45431264/Johnston-1995-Thinking-aboutStrategic-Culture.pdf ; https://press.princeton.edu/books/paperback/9780691002392/cultural-realism
 - Practice theory — https://www.cambridge.org/core/journals/international-organization/article/abs/logic-of-practicality-a-theory-of-practice-of-security-communities/63A65E80B53BEC54E705AAE179CCD723 ; https://journals.sagepub.com/doi/abs/10.1177/0010836715574913
