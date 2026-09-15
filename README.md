@@ -19,6 +19,8 @@ docs/04-runbook.md            step-by-step collection
 docs/05-realism-lawfare-literature.md
                               annotated literature map: modern realism +
                               Russian lawfare (theory, four arenas, designs)
+docs/06-thesis-design.md     which theories carry the lawfare thesis, and
+                              where the design is exposed
 data/seed/                    hand-coded tables (contacts, joint documents, UNSC actions)
 data/schema/                  JSON Schema for each table
 src/rcwatch/                  library + CLI (stdlib only, no dependencies)

@@ -8,6 +8,11 @@ research problem (Part 5) rather than sitting in separate chapters that never ta
 territorial, armed conflict and international criminal law, and economic/grey-zone
 legal coercion.
 
+**See also `docs/06-thesis-design.md`**, which takes the stated thesis design
+(definition → case identification → structure → doctrine indicators → opportunism vs.
+something deeper) and works out which of the theories below can actually carry it,
+where the design is exposed, and who has already published on the same ground.
+
 ## Citation confidence
 
 This repo tags provenance on data; the same discipline applies here.
@@ -72,6 +77,14 @@ hypothesis: legal behaviour is decoration.
   *Russia's Foreign Policy: Change and Continuity in National Identity* (Rowman &
   Littlefield, multiple eds). `[u]`
 
+- **The standing critique you must answer: Legro & Moravcsik, "Is Anybody Still a
+  Realist?", *International Security* 24:2 (1999), 5–55. `[v]`**
+  Argues that defensive and neoclassical realists rescue realism from anomalies by
+  recasting it in forms "theoretically less determinate, less coherent, and less
+  distinctive to realism", naming Rose's neoclassical realists directly. Any thesis
+  resting on NCR has to show the framework can be disconfirmed. See
+  `docs/06-thesis-design.md` §4.
+
 **Purchase for lawfare: high, and under-exploited.** Neoclassical realism has a
 ready-made slot for legal argumentation — as an *intervening variable* on the
 output side: elite legal culture, the MFA's Legal Department, the codified doctrine
@@ -123,6 +136,30 @@ status performance as much as policy blocking.
   2014); Deitelhoff & Zimmermann on norm robustness and erosion. `[u]`
 - Applied: "Authoritarian Norm Contestation and International Broadcasting: RT's norm
   contestation strategy during the Ukraine Crisis", *International Politics* (2023). `[v]`
+
+### 1.5a Theories whose subject is behavioural coherence
+
+Realism explains policy *choices*. If the question is whether a pattern of conduct is
+strategic, doctrinal, routine or improvised, these are the literatures that take that
+as their dependent variable. Argued through in `docs/06-thesis-design.md` §5.
+
+- **Johnston, *Cultural Realism: Strategic Culture and Grand Strategy in Ming China*
+  (Princeton UP, 1995), and "Thinking about Strategic Culture", *International
+  Security* 19:4 (1995), 32–64. `[v]`**
+  Behaviour as the expression of durable, transmitted strategic preferences. Johnston
+  sets out three generations of strategic-culture theory and shows the first to be
+  unfalsifiable — **use the third generation**, or you import the same defect NCR has.
+- **Allison & Zelikow, *Essence of Decision*. `[u]`**
+  Organisational process and bureaucratic politics: patterned output with no strategy
+  behind it. The strongest rival hypothesis to any "Russian lawfare strategy" claim,
+  because a legal department produces legal arguments as its standing function.
+- **Adler & Pouliot (eds), *International Practices* (CUP, 2011); Pouliot, "The Logic
+  of Practicality", *International Organization* (2008); Pouliot & Cornut, "Practice
+  theory and the study of diplomacy", *Cooperation and Conflict* (2015). `[v]`**
+  Competent, patterned, recognisable conduct arising from background knowledge and a
+  shared repertoire *without* central direction. **The theory that dissolves the
+  strategy/opportunism binary instead of picking a side**, and the most likely correct
+  answer for the Russian case.
 
 ### 1.6 Realism's own theory of international law
 
@@ -186,6 +223,26 @@ citing Mearsheimer for it is a category error.
   overwhelmingly applied to *adversaries'* legal activity, so it smuggles in a
   normative judgment. A thesis that uses "lawfare" as an analytic category without
   confronting this will be attacked on it in the viva.
+
+### 2.1a MALOPs — the rival concept, and a completed PhD on adjacent ground
+
+- **Fisher, "Malign Legal Operations (MALOPs) in International Law in the Context of
+  Russia's Invasion of Ukraine", PhD dissertation, National University of
+  Kyiv-Mohyla Academy (2023) `[v]`**, with "The Kremlin's Malign Legal Operations on
+  the Black Sea", *Kyiv-Mohyla Law and Politics Journal* `[v]`; "Russia's Invasion of
+  Ukraine and the Doctrine of Malign Legal Operations", *Access to Justice in Eastern
+  Europe* `[v]`; "The Origins of 'Lawfare' and the Exploitation of Public
+  International Law" `[v]`.
+  Argues "lawfare" is inadequate for scholarly and policy use and should be replaced
+  by MALOPs — "the exploitation of legal systems by employing disinformation to shape
+  perceptions of legitimacy, justify violations, escape legal obligations, contain
+  adversaries, or to advantageously revise the rule of law" — and that MALOPs are the
+  root of contemporary hybrid warfare. **Directly negates the claim that lawfare is a
+  usable discriminating category; positioning against it is unavoidable.** See
+  `docs/06-thesis-design.md` §7.
+- Policy-facing treatments in the same register: *Journal on Baltic Security*,
+  "Russian Lawfare — Russia's Weaponisation of International and Domestic Law"; Just
+  Security, "Countering Russian Lawfare and Gray Zone Operations". `[v]`
 
 **Methodological warning.** "Lawfare" is an essentially contested, polemical term
 with a military-policy provenance and, more recently, a domestic-politics usage
@@ -274,6 +331,12 @@ against it.
   cover.
 - **Allison, "Russia and the post-2014 international legal order: revisionism and
   realpolitik", *International Affairs* 93:3 (2017), 519–543. `[v]`**
+- **Allison, "Russia's Case for War against Ukraine: Legal Claims, Political Rhetoric,
+  and Instrumentality in a Fracturing International Order", *Problems of
+  Post-Communism* 71:3 (2023/24). `[v]`**
+  Qualitative content analysis of Russian speeches and texts on the war: rhetorical
+  character, intended audiences, and the instrumentality of the irredentist claims on
+  "historic Russian regions". The post-2022 extension of the programme below.
 - **Allison, "Russian Revisionism, Legal Discourse and the 'Rules-Based' International
   Order", *Europe-Asia Studies* 72:6 (2020), 976–995. `[v]`**
   **This is the finding your thesis must either extend or overturn.** Examining
@@ -628,6 +691,11 @@ Pages used to confirm `[v]` citations:
 - Crimea arbitration — https://journals.uni-goettingen.de/gojil/article/view/2323 ; https://kluwerlawonline.com/journalarticle/Journal+of+International+Arbitration/38.5/JOIA2021031 ; https://legalblogs.wolterskluwer.com/arbitration-blog/crimea-as-russian-territory-for-the-purposes-of-the-russia-ukraine-bit-consent-v-international-law/
 - Lugovoy law — https://tlblog.org/russias-lugovoy-law-and-the-battle-for-jurisdiction/ ; https://cisarbitration.com/2024/09/10/exclusive-jurisdiction-of-russian-courts-the-impact-of-sanctions-and-the-lugovoy-law/ ; https://legalblogs.wolterskluwer.com/arbitration-blog/russian-courts-claim-exclusive-jurisdiction-over-disputes-between-russian-domiciled-companies-another-blow-to-international-arbitration/
 - Article 234 / NSR — https://www.tandfonline.com/doi/full/10.1080/00908320.2020.1835026 ; https://www.tandfonline.com/doi/full/10.1080/2154896X.2020.1818487 ; https://www.cambridge.org/core/journals/leiden-journal-of-international-law/article/polar-silk-road-and-the-future-governance-of-the-northern-sea-route/DDDD1490B22BEB2493BF7D6BDE54152B ; https://polities.mgimo.ru/jour/article/view/64
+- Legro & Moravcsik 1999 — https://direct.mit.edu/isec/article/24/2/5/11642/Is-Anybody-Still-a-Realist
+- Johnston 1995 — https://www.fb03.uni-frankfurt.de/45431264/Johnston-1995-Thinking-aboutStrategic-Culture.pdf ; https://press.princeton.edu/books/paperback/9780691002392/cultural-realism
+- Practice theory — https://www.cambridge.org/core/journals/international-organization/article/abs/logic-of-practicality-a-theory-of-practice-of-security-communities/63A65E80B53BEC54E705AAE179CCD723 ; https://journals.sagepub.com/doi/abs/10.1177/0010836715574913
+- Fisher / MALOPs — https://ekmair.ukma.edu.ua/items/e4b26c39-3942-4cfb-b777-6a95ba867dca ; http://kmlpj.ukma.edu.ua/article/view/190000 ; https://ajee-journal.com/russia-s-invasion-of-ukraine-and-the-doctrine-of-malign-legal-operations
+- Allison 2023 — https://www.tandfonline.com/doi/abs/10.1080/10758216.2023.2254915
 - Weaponized interdependence / sanctions — https://direct.mit.edu/isec/article/44/1/42/12237/Weaponized-Interdependence-How-Global-Economic ; https://yalebooks.yale.edu/book/9780300270488/the-economic-weapon/
 
 **Not yet retrieved.** `academic.oup.com`, `chathamhouse.org`, `rees.ox.ac.uk` and
