@@ -1,203 +1,240 @@
 # PhD work plan and schedule
 
-Start: **February 2026**. Four-year programme. Submission window: **December 2029 –
-February 2030**. This plan was written in September 2026 — **month 8**.
+**Format: monograph dissertation + 2 articles.** Start February 2026, four years.
+Submission window **December 2029 – February 2030**. Written September 2026,
+**month 8**.
 
-**Assumptions, because they change the shape.** (1) The thesis is article-based or
-hybrid — two to four publishable articles plus framing chapters — which the existence
-of a v4 article at month 8 suggests. If it is a straight monograph, the schedule
-below is unchanged but the "submit article" milestones become "complete chapter
-draft" and you extract one article instead of three. (2) There is a
-confirmation/upgrade gate somewhere between month 12 and month 24; slot it where
-your institution puts it. (3) Teaching load is not accounted for — subtract from the
-writing days in §9, not from the milestones.
+This is a heavier load than either pure format — a full monograph *and* two
+publishable articles — so scope discipline matters more than it would otherwise, and
+the articles have to be by-products of chapters rather than separate projects.
+
+## 0. Three things to confirm with your supervisor first
+
+These change the plan, and two of them change it a lot.
+
+1. **Published, accepted, or submitted?** If the requirement is *published*, journal
+   lag becomes a hard constraint. Political science submission-to-publication runs
+   12–18 months, sometimes 24. That forces article 2 to be submitted by **July 2028**
+   at the latest — see §5.
+2. **May the articles overlap with thesis chapters?** Normally yes, with
+   acknowledgement, and this plan assumes it. If they must be separate work, the
+   scope has to come down further and you should replan.
+3. **Can published text be reused in the monograph?** Most institutions allow it
+   with a statement; some require rewriting. Affects how much of article 1 you can
+   lift into chapter 2.
 
 ---
 
 ## 1. Where you are at month 8
 
-Stronger than it feels, with three specific debts.
+Ahead, with three specific debts.
 
-**Assets.** A concept-formation article at v4 that is close to submittable. A
-resolved theoretical frame (`docs/07`, `docs/08`). Working data infrastructure with
-provenance discipline (`rcwatch`, reusable per `docs/06` §6). A known competitor
-(Fisher's 2023 MALOPs dissertation) and a known principal interlocutor (Allison's
-four articles).
+**Assets.** A concept article at v4 that is close to submittable — **that is article
+1 of 2 already most of the way done.** A resolved theoretical frame (`docs/07`,
+`docs/08`). Working data infrastructure with provenance discipline (`rcwatch`,
+reusable per `docs/06` §6). A known competitor (Fisher's 2023 MALOPs dissertation)
+and a principal interlocutor (Allison's four articles).
 
-**Debts, in order of how much they threaten the critical path.**
+**Debts, worst first.**
 
 1. **Chinese-language sources.** The PLA material is load-bearing in two places in
-   the article — the parallel-origin argument in §2 and the internal modes of
+   the article — the parallel-origin argument in §2 and Xun's internal modes of
    restraint in §6 — and you cannot verify either. This blocks publication, not just
-   polish. Needs a decision this quarter, not an aspiration.
+   polish. Needs a decision this quarter.
 2. **Incomplete references.** Gordon, Hughes, Noone, Popa, Schu, Sadat & Geng are
-   all marked "citation required"; Kittrie's formulations and Dunlap's need checking
-   against primary texts. A week of work, but it cannot be done at proof stage.
-3. **No empirical case work has begun.** Normal at month 8. It becomes the binding
-   constraint from month 13.
+   marked "citation required"; Kittrie's and Dunlap's formulations need checking
+   against primary texts. A week, but not doable at proof stage.
+3. **No empirical case work.** Normal at month 8. Becomes the binding constraint
+   from month 13.
 
 ## 2. The four-year shape
 
 | Year | Months | Dates | The one thing |
 |---|---|---|---|
-| **1** | 1–12 | Feb 2026 – Jan 2027 | Close the concept. Fix the frame. |
+| **1** | 1–12 | Feb 2026 – Jan 2027 | Close the concept. **Article 1 out.** |
 | **2** | 13–24 | Feb 2027 – Jan 2028 | Build the case universe. |
-| **3** | 25–36 | Feb 2028 – Jan 2029 | Write the arena chapters. |
+| **3** | 25–36 | Feb 2028 – Jan 2029 | Arena chapters. **Article 2 out.** |
 | **4** | 37–48 | Feb 2029 – Jan 2030 | Synthesise, revise, submit. |
 
 One deliverable per quarter. Not two.
 
-## 3. Year 1 — remainder (Sept 2026 – Jan 2027)
+## 3. The monograph, and its word budget
+
+Because this is a monograph rather than a stapled set of papers, the framing chapters
+carry real weight and the concept chapter has to set up the whole thesis, not just
+win a definitional argument.
+
+| Chapter | Words | Source |
+|---|---|---|
+| 1. Introduction | 8k | Written last |
+| 2. The concept | 12k | Article 1, expanded with more test cases |
+| 3. Theory | 10k | `docs/06`–`08` |
+| 4. Case universe and method | 8k | The protocol from Y2 |
+| 5. Courts and tribunals | 12k | |
+| 6. Maritime and territorial | 12k | **→ Article 2** |
+| 7. Economic-legal and jurisdictional | 12k | |
+| 8. Institutional/UN — comparison | 8k | Shallower; `rcwatch` supplies most of it |
+| 9. Synthesis | 10k | |
+| **Total** | **~92k** | |
+
+**Three arenas deep, one as controlled comparison.** Four treated fully is ~100k
+across four evidence bases, and with two articles on top that is not deliverable in
+four years. Decide the arena set by **April 2027**, not end of Year 2 as I said
+before — you need to know early which chapter becomes article 2.
+
+## 4. Article 1 — the concept piece (out by Jan 2027)
 
 **Q3, Sept–Oct 2026**
 - Decide the Chinese-source question. Three options: find a co-author or paid
-  translator who reads Chinese; get the CASI translation checked by one; or demote
-  the material to a flagged appendix and remove it from the argument's load-bearing
-  positions. **Pick one by end of October.**
+  translator who reads Chinese; have the CASI translation checked by one; or demote
+  the material to a flagged appendix and remove it from load-bearing positions.
+  **Pick one by end of October.** Demotion is an acceptable outcome; leaving it open
+  is not.
 - Clear the reference debts. Kittrie and Dunlap from primary texts.
-- Add the political science theory to the article per `docs/08` §9 — this is a
-  revision pass, not a rewrite, and it is what makes the piece legible to a politics
-  journal.
+- Add the political science theory per `docs/08` §9 — a revision pass, not a
+  rewrite, and what makes the piece legible to a politics journal.
 
 **Q4, Nov 2026 – Jan 2027**
-- **Submit the concept article.** Target a politics or interdisciplinary venue
-  rather than a law review: *Review of International Studies*, *European Journal of
-  International Relations*, *International Theory*, *Journal of Global Security
-  Studies*.
-- Draft the theory chapter, 10–12k. The material exists across `docs/06`–`08`; this
-  is assembly and argument, not new reading.
-- Read the competitors properly: Fisher's dissertation and its two articles;
-  Allison 2014, 2017, 2020, 2023. Write 2k positioning yourself against each.
+- **Submit article 1.** Politics or interdisciplinary venue, not a law review:
+  *Review of International Studies*, *European Journal of International Relations*,
+  *International Theory*, *Journal of Global Security Studies*.
+- Draft the theory chapter, 10k. Assembly and argument, not new reading.
+- Read the competitors: Fisher's dissertation and its two articles; Allison 2014,
+  2017, 2020, 2023. Write 2k positioning yourself against each.
 - Contact Marchuk about the EASTERNISATION project.
 - First annual review.
 
-## 4. Year 2 — the case universe (Feb 2027 – Jan 2028)
+## 5. Article 2 — which, and why the timing is tight
+
+**Recommendation: the maritime and territorial chapter.** The Article 234 versus
+CLCS contrast is a clean, self-contained puzzle — same state, same region, same
+decade, opposite legal behaviour — and "why does Russia follow the rules here and
+not there?" is a publishable question in a politics journal with a within-case
+research design attached. It also loses least by being extracted, since it depends
+less on the rest of the thesis than the other chapters do.
+
+Alternative: the economic-legal chapter. More novelty (there is no strong IR
+treatment of Article 248.1) but less theoretical bite, and a reviewer may ask what
+the puzzle is.
+
+**The timing constraint.** If the requirement is *published* rather than submitted,
+work backwards: 12–18 months from submission to publication means **article 2 must be
+submitted by July 2028**. That has a consequence the earlier draft of this plan got
+wrong:
+
+> **The chapter that becomes article 2 must be written early in Year 3, not late.**
+
+So the arena chapters get written in a specific order, and it is not the order they
+appear in the thesis.
+
+## 6. Year 2 — the case universe (Feb 2027 – Jan 2028)
 
 The heaviest year, and the one that determines whether the thesis exists.
 
 **Q1, Feb–Apr 2027 — protocol before data**
-- Write the case-identification protocol: how a candidate case enters, what evidence
+- Write the case-identification protocol: how a candidate enters, what evidence
   establishes each condition, the coding frame. Reuse the `data/schema/` pattern —
-  one row per case, with source URL and verification status.
+  one row per case with source URL and verification status.
 - Operationalise the indicator ladder (`docs/06` §3) into codeable variables.
-- Pilot on five cases you already know. Expect the protocol to break; that is what
-  a pilot is for.
+- Pilot on five cases you know. Expect the protocol to break; that is the point.
+- **Fix the arena set and name the article-2 chapter.**
 
 **Q2, May–Jul 2027 — positive cases**
-- Systematic identification across all four arenas. Target 40–60 candidates,
-  expecting a third to survive coding.
+- Systematic identification across the arenas. Target 40–60 candidates, expecting
+  roughly a third to survive coding.
 - Extend the `rcwatch` M6 phrase dictionary to legal formulations and run it.
+- Ethics approval if you want interviews — it takes a term.
 
 **Q3, Aug–Oct 2027 — negative cases, deliberately**
 - **Protect this quarter.** Negative and near-miss cases are what prove the concept
   discriminates (`docs/06` §2), and they are harder to find than positive ones
-  because you are looking for absences. They will not appear as a by-product of the
-  positive search.
-- The Arctic CLCS submissions; the pre-2020 ECtHR compliance record; WTO dispute
-  participation; reservation practice that is unremarkable.
-- Interviews if you want them, and this is the window: NATO ACO Office of Legal
-  Affairs, tribunal and arbitration counsel, Ukrainian MFA legal service, INTERPOL
-  file-review practitioners. Ethics approval takes a term — apply in Q2.
+  because you are looking for absences. They will not fall out of the positive
+  search.
+- Arctic CLCS submissions; the pre-2020 ECtHR compliance record; WTO dispute
+  participation; unremarkable reservation practice.
+- Interviews if wanted: NATO ACO Office of Legal Affairs, tribunal and arbitration
+  counsel, Ukrainian MFA legal service, INTERPOL file-review practitioners.
 
 **Q4, Nov 2027 – Jan 2028**
-- First empirical chapter drafted, 12k. Pick the arena with the best-documented
-  record — probably courts and tribunals.
+- **Chapter 5 drafted** (courts and tribunals — best documented, good arena to learn
+  the method on).
 - Conference paper: ISA (abstracts ~June), EISA, or BISA.
-- Confirmation/upgrade if it falls here. Submit the theory chapter plus the first
-  empirical chapter as the sample.
-- **Decide the scope question in §6 below.**
+- Confirmation/upgrade if it falls here: submit theory chapter + chapter 5.
 
-## 5. Year 3 — arena chapters (Feb 2028 – Jan 2029)
+## 7. Year 3 — arena chapters and article 2 (Feb 2028 – Jan 2029)
 
 | Quarter | Deliverable |
 |---|---|
-| Feb–Apr 2028 | Arena chapter 2 drafted |
-| May–Jul 2028 | Arena chapter 3 drafted; **second article submitted** (an arena chapter, reworked) |
-| Aug–Oct 2028 | Fourth arena — deep or comparative, per the Y2 decision; economic-legal is the strongest novelty claim |
-| Nov 2028 – Jan 2029 | Methods/case-universe chapter written up; annual review; **all empirical work closed** |
+| **Feb–Apr 2028** | **Chapter 6 drafted (maritime)** — the article-2 source, written early on purpose |
+| **May–Jul 2028** | **Extract and submit article 2.** Reworking a drafted chapter is a few weeks; writing fresh is a term |
+| Aug–Oct 2028 | Chapter 7 drafted (economic-legal) |
+| Nov 2028 – Jan 2029 | Chapter 8 (comparison arena, 8k) + chapter 4 (method) written up; annual review; **all empirical work closed** |
 
 Close the empirical work at the end of Year 3 and mean it. Late additions are the
-most common reason four-year theses take five.
+commonest reason four-year theses run to five.
 
-## 6. The scope risk you should resolve in Year 2
-
-Four arenas treated fully is roughly:
-
-| Chapter | Words |
-|---|---|
-| Introduction | 8k |
-| Concept | 12k |
-| Theory | 12k |
-| Methods / case universe | 10k |
-| Four arena chapters | 48k |
-| Synthesis | 10k |
-| **Total** | **~100k** |
-
-That is at or over most limits, and it is four separate evidence bases. **Plan three
-arenas deep and one as a controlled comparison**, which brings you to ~88k and
-protects Year 4.
-
-My suggestion on which: courts and tribunals (best documented, and Kuc's procedural
-claim is there to test); maritime and territorial (the Article 234 / CLCS contrast
-is your sharpest within-case comparison); economic-legal and jurisdictional (the
-clearest claim to novelty — there is no strong IR treatment of Article 248.1). The
-institutional/UN arena becomes the comparison case, and it is the one where
-`rcwatch` already gives you quantitative material cheaply.
-
-## 7. Year 4 — synthesis and submission (Feb 2029 – Jan 2030)
+## 8. Year 4 — synthesis and submission (Feb 2029 – Jan 2030)
 
 | Quarter | Deliverable |
 |---|---|
-| Feb–Apr 2029 | Synthesis chapter: which hypothesis survives, what it means for the concept and for realism's treatment of law |
-| May–Jul 2029 | Introduction written last, as it should be. Third article submitted |
-| **Aug 2029** | **Full draft to supervisors. Month 43. This is the date that matters.** |
-| Sept–Nov 2029 | Revision on supervisor comments. Examiner-proofing: read it as the hostile reader, fix what they would find |
+| Feb–Apr 2029 | Chapter 9, synthesis: which hypothesis survives, what it means for the concept and for realism's treatment of law |
+| May–Jul 2029 | Chapter 2 expanded from article 1 into the concept chapter; chapter 1 written last. Article 2 revisions if an R&R lands |
+| **Aug 2029** | **Full draft to supervisors. Month 43.** |
+| Sept–Nov 2029 | Revision on supervisor comments; examiner-proofing — read it as the hostile reader and fix what they would find |
 | Dec 2029 | Formatting, references, final read |
 | Dec 2029 – Feb 2030 | Submit |
 
-**The full draft at month 43 is the single non-negotiable date in this plan.** Five
-months between complete draft and submission is not padding — it is where a
-defensible thesis becomes a good one. Every month you borrow from it comes out of
-quality.
+**Month 43 is the one non-negotiable date.** Five months between complete draft and
+submission is where a defensible thesis becomes a good one.
 
-## 8. Critical path and standing risks
+## 9. Milestones
 
-**The dependency chain.** Concept article → case-identification protocol → case
-universe → arena chapters → synthesis. Nothing downstream can start properly until
-the definition is stable, which is why the Year 1 remainder matters more than its
-length suggests.
+| Date | Milestone |
+|---|---|
+| Oct 2026 | Chinese-source decision made |
+| Jan 2027 | **Article 1 submitted**; theory chapter drafted; annual review |
+| Apr 2027 | Case protocol fixed; arena set fixed; article-2 chapter named |
+| Oct 2027 | Negative cases collected |
+| Jan 2028 | Chapter 5 drafted; confirmation/upgrade |
+| Apr 2028 | Chapter 6 drafted |
+| **Jul 2028** | **Article 2 submitted** — hard deadline if publication is required |
+| Jan 2029 | Chapters 4, 7, 8 drafted; empirical work closed |
+| Apr 2029 | Synthesis drafted |
+| **Aug 2029** | **Full draft complete** |
+| Dec 2029 – Feb 2030 | Submission |
+
+## 10. Risks
 
 | Risk | Mitigation |
 |---|---|
-| Chinese sources stay unverifiable | Decide by end Oct 2026. Demotion to appendix is an acceptable outcome; leaving it unresolved is not |
-| Case universe expands indefinitely | Fixed protocol, fixed close date (end Y3), fixed arena count (decided end Y2) |
-| Selection-on-DV objection | Negative cases in Q3 Y2 as a protected block; cite von Stein and Downs/Rocke/Barsoom in the methods chapter |
-| Fisher's MALOPs work scoops the framing | Already positioned against in `docs/06` §7 — your neutral-definition argument is stronger. Publish the concept article in Y1 to establish priority |
-| Archive access closes further | You are working from public institutional records by design, not Russian archives. Keep it that way |
-| Theory drift | It is settled (`docs/07`, `docs/08`). Do not reopen it after the theory chapter is drafted unless an empirical finding forces it |
-| Verification debts accumulate | The `[v]`/`[u]` tagging in `docs/05` and the `verification` column in the case table. Audit quarterly |
+| Chinese sources stay unverifiable | Decide by end Oct 2026; appendix demotion is fine, drift is not |
+| Article 2 too late to be published in time | Write chapter 6 first in Y3; submit by Jul 2028 |
+| Case universe expands indefinitely | Fixed protocol, fixed arena set (Apr 2027), fixed close date (Jan 2029) |
+| Selection-on-DV objection | Protected negative-case quarter; cite von Stein and Downs/Rocke/Barsoom in chapter 4 |
+| Monograph + 2 articles overruns | Three arenas deep, one comparative. Do not add a fourth deep arena under any circumstances |
+| Fisher's MALOPs work scoops the framing | Already positioned against (`docs/06` §7); publishing article 1 in Y1 establishes priority |
+| Reuse rules bite at the end | Confirm §0.3 now, not in Year 4 |
+| Theory drift | Settled (`docs/07`, `docs/08`). Do not reopen after the theory chapter is drafted unless a finding forces it |
 
-## 9. Weekly rhythm
+## 11. Weekly rhythm
 
 An annual plan without a week is decoration.
 
 | | |
 |---|---|
-| **2 days** | Writing. Before reading, not after. Something on the page every week, however rough |
-| **1.5 days** | Sources and coding — the case table, document retrieval, verification |
-| **1 day** | Reading, against a list you wrote in advance, not by following citations |
-| **0.5 day** | Admin, supervision, correspondence, the quarterly audit |
+| **2 days** | Writing. Before reading, not after. Something on the page every week |
+| **1.5 days** | Sources and coding — case table, retrieval, verification |
+| **1 day** | Reading, against a list written in advance, not by following citations |
+| **0.5 day** | Admin, supervision, correspondence, quarterly audit |
 
-Adjust the ratio for teaching, but keep writing first in the week. The failure mode
-is reading all year and writing in the last one.
+Subtract teaching from the writing days, not from the milestones — and keep writing
+first in the week regardless.
 
-## 10. Five rules
+## 12. Five rules
 
 1. **One deliverable per quarter.** Not two.
-2. **Write before you have read enough.** You never will have. Drafting shows you
-   what is missing faster than reading does.
-3. **Publications are by-products of chapters**, never separate projects. A chapter
-   reworked into an article is a week; an article written fresh is a term.
-4. **Verify on entry.** A source not checked when you find it is a debt with
-   interest.
+2. **Write before you have read enough.** You never will have.
+3. **Both articles are by-products of chapters.** An extracted chapter is a few
+   weeks; a fresh article is a term you do not have.
+4. **Verify on entry.** A source unchecked when found is a debt with interest.
 5. **Protect month 43.** Everything else is negotiable.
