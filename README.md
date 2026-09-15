@@ -24,6 +24,9 @@ docs/06-thesis-design.md     which theories carry the lawfare thesis, and
 docs/07-what-the-theory-does.md
                               plain-language: what theory is for in the
                               lawfare thesis, and the three jobs it does
+docs/08-mechanisms-and-theory.md
+                              maps the draft article's two mechanisms onto
+                              political science theory
 data/seed/                    hand-coded tables (contacts, joint documents, UNSC actions)
 data/schema/                  JSON Schema for each table
 src/rcwatch/                  library + CLI (stdlib only, no dependencies)
