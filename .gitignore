@@ -5,3 +5,4 @@ out/cache/
 out/*.csv
 out/*.pkl
 .venv/
+images/
